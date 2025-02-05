@@ -1,0 +1,20 @@
+.username {
+  font-weight: bold;
+}
+
+.post-comments form {
+  display: flex;
+  align-items: center;
+}
+
+.post-comments input[type='text'] {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.post-comments .submit-button {
+  rotate: 50deg;
+  margin-left: 10px;
+}

@@ -1,0 +1,24 @@
+h1 {
+  font-size: 1.5em;
+}
+
+#draggable {
+  display: inline-block;
+  cursor: move;
+  padding: 10px;
+  background-color: lightgrey;
+}
+
+#draggable:hover {
+  background-color: grey;
+}
+
+#dropzone {
+  border: 1px solid red;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}

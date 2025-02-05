@@ -1,0 +1,9 @@
+.post-likes {
+  display: flex;
+  align-items: center;
+}
+
+.like-count {
+  font-size: 16px;
+  margin-left: 10px;
+}
