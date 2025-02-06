@@ -1,5 +1,6 @@
 import { useActionState } from 'react';
 import { FormState, FormData } from './types.ts';
+import './index.css';
 
 const Form = () => {
   const [state, formAction, isPending] = useActionState<FormState, FormData>(
