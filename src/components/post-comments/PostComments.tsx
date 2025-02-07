@@ -20,14 +20,11 @@ const PostComments: React.FC<PostCommentsProps> = ({ comments }) => {
     <div className="post-comments">
       <h2>{comments.length} comments:</h2>
       <ul>
-        {comments.map((comment, index) => {
-          debugger;
-          return (
-            <li key={index}>
-              <Comment {...comment} />
-            </li>
-          );
-        })}
+        {comments.map((comment, index) => (
+          <li key={index}>
+            <Comment {...comment} />
+          </li>
+        ))}
       </ul>
       <form>
         <input
