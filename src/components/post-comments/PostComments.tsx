@@ -9,6 +9,8 @@ type PostCommentsProps = {
   comments: CommentProps[];
 };
 
+// Can dynamically retrieves the comments for a post
+// Additionally, updates to the comments should be stored on the server
 const PostComments: React.FC<PostCommentsProps> = ({ comments }) => {
   const [text, setText] = useState<string>('');
   const handleClick = (e: React.FormEvent<HTMLInputElement>) =>

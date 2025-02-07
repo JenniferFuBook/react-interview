@@ -1,4 +1,5 @@
 import { CommentProps } from './types';
+import './index.css';
 
 const Comment: React.FC<CommentProps> = ({ username, comment }) => (
   <div className="comment">

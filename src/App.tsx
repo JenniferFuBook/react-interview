@@ -3,7 +3,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import FormSimple from './components/form/FormSimple';
 // import FormAdvanced from './components/form/FormAdvanced';
 // import Timer from './use-cases/Timer';
-// import BlogPostExample2 from './use-cases/BlogPostExample2';
+// import BlogPostApp from './use-cases/BlogPostApp';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       {/* <Timer /> */}
 
       {/* Chapter 3 examples */}
-      {/* <BlogPostExample2 /> */}
+      {/* <BlogPostApp /> */}
     </>
   );
 }
