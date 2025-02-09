@@ -4,6 +4,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import FormAdvanced from './components/form/FormAdvanced';
 // import Timer from './use-cases/Timer';
 // import BlogPostApp from './use-cases/BlogPostApp';
+// import RenderComponent from './use-cases/RenderComponent';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
 
       {/* Chapter 3 examples */}
       {/* <BlogPostApp /> */}
+      {/* <RenderComponent /> */}
     </>
   );
 }
