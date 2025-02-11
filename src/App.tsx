@@ -5,12 +5,14 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import Timer from './use-cases/Timer';
 // import BlogPostApp from './use-cases/BlogPostApp';
 // import RenderComponent from './use-cases/RenderComponent';
+// import SearchComponentExample from './use-cases/SearchComponentExample';
+import UsePromise from './use-cases/UsePromise';
 
 function App() {
   return (
     <>
       {/* Chapter 2 examples */}
-      <BlogPostExample />
+      {/* <BlogPostExample /> */}
       {/* <DragAndDrop /> */}
       {/* <FormSimple /> */}
       {/* <FormAdvanced /> */}
@@ -19,6 +21,8 @@ function App() {
       {/* Chapter 3 examples */}
       {/* <BlogPostApp /> */}
       {/* <RenderComponent /> */}
+      {/* <SearchComponentExample /> */}
+      <UsePromise />
     </>
   );
 }

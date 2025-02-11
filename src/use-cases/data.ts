@@ -29,10 +29,13 @@ export const samplePost: PostProps = {
 export const sampleComments: CommentProps[] = [
   {
     username: 'CodeCrafter',
-    comment: 'The article provides a concise and beginner-friendly explanation of what React is and why it is beneficial. It covers the key concepts of components and declarative views, making it a great starting point for those new to React.',
+    comment:
+      'The article provides a concise and beginner-friendly explanation of what React is and why it is beneficial. It covers the key concepts of components and declarative views, making it a great starting point for those new to React.',
   },
   {
     username: 'SemanticWizard',
     comment: 'It is a great demo!',
-  }
+  },
 ];
+
+export const fruitList = ['Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry'];

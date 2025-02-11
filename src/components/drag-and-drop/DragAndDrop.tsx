@@ -1,6 +1,6 @@
 import './index.css';
 
-const DragAndDrop = () => {
+const DragAndDrop: React.FC = () => {
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
     e.dataTransfer.setData('savedId', e.currentTarget.id); // Store the ID of the dragged element
   };

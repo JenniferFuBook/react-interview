@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useInterval } from '../components/use-interval/useInterval';
 
-const Timer = () => {
+const Timer: React.FC = () => {
   const [seconds, setSeconds] = useState<number>(0); // Timer state
   const [isRunning, setIsRunning] = useState<boolean>(false); // Running state
 
