@@ -6,13 +6,13 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import BlogPostApp from './use-cases/BlogPostApp';
 // import RenderComponent from './use-cases/RenderComponent';
 // import SearchComponentExample from './use-cases/SearchComponentExample';
-import UsePromise from './use-cases/UsePromise';
+// import UsePromise from './use-cases/UsePromise';
 
 function App() {
   return (
     <>
       {/* Chapter 2 examples */}
-      {/* <BlogPostExample /> */}
+      <BlogPostExample />
       {/* <DragAndDrop /> */}
       {/* <FormSimple /> */}
       {/* <FormAdvanced /> */}
@@ -22,7 +22,7 @@ function App() {
       {/* <BlogPostApp /> */}
       {/* <RenderComponent /> */}
       {/* <SearchComponentExample /> */}
-      <UsePromise />
+      {/* <UsePromise /> */}
     </>
   );
 }
