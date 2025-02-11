@@ -17,11 +17,12 @@ const getWeekNames = () =>
     }, 1000)
   );
 
+// Create the initial Promise outside the component
 const weekNamesPromise = getWeekNames();
 
 const WeekView: React.FC = () => {
   const [getWeekNamesPromise, setGetWeekNamesPromise] =
-    useState(weekNamesPromise);
+    useState(weekNamesPromise); // Avoid creating a new Promise during every render
   const weekNames = use(getWeekNamesPromise);
 
   return (

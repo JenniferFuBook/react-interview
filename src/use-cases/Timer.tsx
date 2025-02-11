@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useInterval } from '../components/use-interval/useInterval';
+import { useInterval } from '../hooks/use-interval/useInterval';
 
 const Timer: React.FC = () => {
   const [seconds, setSeconds] = useState<number>(0); // Timer state
