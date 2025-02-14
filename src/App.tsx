@@ -8,13 +8,13 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import SearchComponentExample from './use-cases/SearchComponentExample';
 // import UsePromise from './use-cases/UsePromise';
 // import DebounceExample from './use-cases/DebounceExample';
-import PropDrillingExample from './use-cases/PropDrillingExample';
+// import PropDrillingExample from './use-cases/PropDrillingExample';
 
 function App() {
   return (
     <>
       {/* Chapter 2 examples */}
-      {/* <BlogPostExample /> */}
+      <BlogPostExample />
       {/* <DragAndDrop /> */}
       {/* <FormSimple /> */}
       {/* <FormAdvanced /> */}
@@ -26,7 +26,7 @@ function App() {
       {/* <SearchComponentExample /> */}
       {/* <UsePromise /> */}
       {/* <DebounceExample /> */}
-      <PropDrillingExample />
+      {/* <PropDrillingExample /> */}
     </>
   );
 }
