@@ -26,7 +26,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ items }) => {
   };
 
   return (
-    <div>
+    <>
       <input
         type="text"
         value={query}
@@ -39,7 +39,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ items }) => {
           <li key={index}>{item}</li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 

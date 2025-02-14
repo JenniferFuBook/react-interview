@@ -22,7 +22,7 @@ const Timer: React.FC = () => {
   };
 
   return (
-    <div>
+    <>
       <h1>Timer: {seconds} seconds</h1>
       <button onClick={startTimer} disabled={isRunning}>
         Start
@@ -33,7 +33,7 @@ const Timer: React.FC = () => {
       <button onClick={resetTimer} disabled={seconds === 0}>
         Reset
       </button>
-    </div>
+    </>
   );
 };
 

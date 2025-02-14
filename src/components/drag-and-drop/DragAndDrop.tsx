@@ -17,7 +17,7 @@ const DragAndDrop: React.FC = () => {
   };
 
   return (
-    <div>
+    <>
       <h1>Drag and Drop API Demo</h1>
       {/* Draggable Element */}
       <div id="draggable" draggable="true" onDragStart={handleDragStart}>
@@ -32,7 +32,7 @@ const DragAndDrop: React.FC = () => {
       >
         Drop Zone
       </div>
-    </div>
+    </>
   );
 };
 

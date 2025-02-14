@@ -47,13 +47,13 @@ interface ParentComponentProps {
 const ParentComponent: React.FC<ParentComponentProps> = ({ count }) => {
   // Receive count as a prop
   return (
-    <div>
+    <>
       <h2>Parent Component</h2>
       <p>Count: {count}</p>
       <Profiler id="ParentComponent" onRender={onRenderCallback}>
         <ChildComponent />
       </Profiler>
-    </div>
+    </>
   );
 };
 
