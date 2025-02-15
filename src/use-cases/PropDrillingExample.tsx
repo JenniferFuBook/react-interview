@@ -2,8 +2,8 @@ type DataProps = {
   data: string;
 };
 
-// Parent Component
-const Parent: React.FC = () => {
+// Parent component
+const ParentComponent: React.FC = () => {
   const data = 'Hello from Parent!';
 
   return (
@@ -15,7 +15,7 @@ const Parent: React.FC = () => {
   );
 };
 
-// Child A Component
+// Child A component
 const ChildA: React.FC<DataProps> = ({ data }) => {
   return (
     <div>
@@ -26,7 +26,7 @@ const ChildA: React.FC<DataProps> = ({ data }) => {
   );
 };
 
-// Child B Component
+// Child B component
 const ChildB: React.FC<DataProps> = ({ data }) => {
   return (
     <div>
@@ -37,7 +37,7 @@ const ChildB: React.FC<DataProps> = ({ data }) => {
   );
 };
 
-// Child C Component (Deeply Nested)
+// Child C component (deeply nested)
 const ChildC: React.FC<DataProps> = ({ data }) => {
   return (
     <div>
@@ -48,4 +48,4 @@ const ChildC: React.FC<DataProps> = ({ data }) => {
   );
 };
 
-export default Parent;
+export default ParentComponent;

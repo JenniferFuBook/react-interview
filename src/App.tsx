@@ -9,6 +9,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import UsePromise from './use-cases/UsePromise';
 // import DebounceExample from './use-cases/DebounceExample';
 // import PropDrillingExample from './use-cases/PropDrillingExample';
+// import ContextApiExample from './use-cases/ContextApiExample';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       {/* <UsePromise /> */}
       {/* <DebounceExample /> */}
       {/* <PropDrillingExample /> */}
+      {/* <ContextApiExample /> */}
     </>
   );
 }
