@@ -10,6 +10,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import DebounceExample from './use-cases/DebounceExample';
 // import PropDrillingExample from './use-cases/PropDrillingExample';
 // import ContextApiExample from './use-cases/ContextApiExample';
+// import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       {/* <DebounceExample /> */}
       {/* <PropDrillingExample /> */}
       {/* <ContextApiExample /> */}
+      {/* <ErrorBoundaryExample /> */}
     </>
   );
 }
