@@ -6,10 +6,10 @@ import {
   useState,
 } from 'react';
 
-// Define the type for the ThemeContext
+// Create the Context API for the theme
 const ThemeContext = createContext<string>('black');
 
-// Profiler callback function
+// Define the Profiler callback function
 const onRenderCallback: ProfilerOnRenderCallback = (
   id: string,
   phase: 'mount' | 'update' | 'nested-update',
@@ -29,7 +29,7 @@ const onRenderCallback: ProfilerOnRenderCallback = (
   `);
 };
 
-// Child Component
+// Define the ChildComponent
 const ChildComponent: React.FC = () => {
   const theme = use(ThemeContext); // Consume context value
   return (
@@ -39,11 +39,11 @@ const ChildComponent: React.FC = () => {
   );
 };
 
-// Parent Component
 interface ParentComponentProps {
   count: number;
 }
 
+// Define the ParentComponent
 const ParentComponent: React.FC<ParentComponentProps> = ({ count }) => {
   // Receive count as a prop
   return (
@@ -57,7 +57,7 @@ const ParentComponent: React.FC<ParentComponentProps> = ({ count }) => {
   );
 };
 
-// Main app component
+// Define the main app component
 const RenderComponent: React.FC = () => {
   const [count, setCount] = useState<number>(0); // Track the count state
   const [theme, setTheme] = useState<string>('black'); // Tract the theme state
@@ -65,21 +65,17 @@ const RenderComponent: React.FC = () => {
   return (
     <Profiler id="mainAppComponent" onRender={onRenderCallback}>
       <ThemeContext.Provider value={theme}>
-        <>
-          <h1>React Profiler Example</h1>
-          {/* Parent re-renders due to state change */}
-          <button onClick={() => setCount(count + 1)}>Increment Count</button>
+        <h1>React Profiler Example</h1>
+        {/* ParentComponent re-renders due to state change */}
+        <button onClick={() => setCount(count + 1)}>Increment Count</button>
 
-          {/* Context change triggers re-render */}
-          <button
-            onClick={() => setTheme(theme === 'black' ? 'blue' : 'black')}
-          >
-            Toggle Theme
-          </button>
+        {/* Context change triggers re-render */}
+        <button onClick={() => setTheme(theme === 'black' ? 'blue' : 'black')}>
+          Toggle Theme
+        </button>
 
-          {/* Pass count as a prop to demonstrate prop changes */}
-          <ParentComponent count={count} />
-        </>
+        {/* Pass in count as a prop to demonstrate prop changes */}
+        <ParentComponent count={count} />
       </ThemeContext.Provider>
     </Profiler>
   );

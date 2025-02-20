@@ -35,7 +35,7 @@ const WeekView: React.FC = () => {
   );
 };
 
-const UsePromise: React.FC = () => {
+const UsePromiseExample: React.FC = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <WeekView />
@@ -43,4 +43,4 @@ const UsePromise: React.FC = () => {
   );
 };
 
-export default UsePromise;
+export default UsePromiseExample;

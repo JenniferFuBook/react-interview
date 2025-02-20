@@ -6,11 +6,12 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import BlogPostApp from './use-cases/BlogPostApp';
 // import RenderComponent from './use-cases/RenderComponent';
 // import SearchComponentExample from './use-cases/SearchComponentExample';
-// import UsePromise from './use-cases/UsePromise';
+// import UsePromiseExample from './use-cases/UsePromiseExample';
 // import DebounceExample from './use-cases/DebounceExample';
 // import PropDrillingExample from './use-cases/PropDrillingExample';
 // import ContextApiExample from './use-cases/ContextApiExample';
 // import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
+// import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
 
 function App() {
   return (
@@ -26,9 +27,10 @@ function App() {
       {/* <BlogPostApp /> */}
       {/* <RenderComponent /> */}
       {/* <SearchComponentExample /> */}
-      {/* <UsePromise /> */}
+      {/* <UsePromiseExample /> */}
       {/* <DebounceExample /> */}
       {/* <PropDrillingExample /> */}
+      {/* <DeclarativeUiExample /> */}
       {/* <ContextApiExample /> */}
       {/* <ErrorBoundaryExample /> */}
     </>
