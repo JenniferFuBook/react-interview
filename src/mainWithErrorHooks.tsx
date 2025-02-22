@@ -15,6 +15,8 @@ function onRecoverableError(error: any, errorInfo: ErrorInfo) {
   console.error('In onRecoverableError', error, errorInfo.componentStack);
 }
 
+// Create a root that defined three error hooks: 
+// onCaughtError, onUncaughtError, and onRecoverableError.
 createRoot(document.getElementById('root')!, {
   onCaughtError,
   onUncaughtError,

@@ -11,9 +11,9 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ items }) => {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setQuery(value); // High-priority update for input field
+    setQuery(value); // High-priority update for the input field
 
-    // Low-priority update that takes 1 second to complete
+    // Low-priority update to filter the list of items
     startTransition(async () => {
       await new Promise((resolve) => setTimeout(() => {
         const filteredResults = items.filter((item) =>

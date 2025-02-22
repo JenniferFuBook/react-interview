@@ -5,13 +5,13 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import Timer from './use-cases/Timer';
 // import BlogPostApp from './use-cases/BlogPostApp';
 // import RenderComponent from './use-cases/RenderComponent';
-// import SearchComponentExample from './use-cases/SearchComponentExample';
 // import UsePromiseExample from './use-cases/UsePromiseExample';
 // import DebounceExample from './use-cases/DebounceExample';
+// import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
 // import PropDrillingExample from './use-cases/PropDrillingExample';
 // import ContextApiExample from './use-cases/ContextApiExample';
+// import SearchComponentExample from './use-cases/SearchComponentExample';
 // import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
-// import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
 
 function App() {
   return (
@@ -26,12 +26,12 @@ function App() {
       {/* Chapter 3 examples */}
       {/* <BlogPostApp /> */}
       {/* <RenderComponent /> */}
-      {/* <SearchComponentExample /> */}
       {/* <UsePromiseExample /> */}
       {/* <DebounceExample /> */}
-      {/* <PropDrillingExample /> */}
       {/* <DeclarativeUiExample /> */}
+      {/* <PropDrillingExample /> */}
       {/* <ContextApiExample /> */}
+      {/* <SearchComponentExample /> */}
       {/* <ErrorBoundaryExample /> */}
     </>
   );

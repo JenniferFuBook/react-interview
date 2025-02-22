@@ -23,8 +23,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     return { hasError: true, error };
   }
 
-  // Log error details for debugging
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+    // Process error and errorInfo when an error is caught
     console.error('Error caught by ErrorBoundary:', error);
     console.error('Error details:', errorInfo.componentStack);
   }
