@@ -1,3 +1,6 @@
+// This example is contained in a single file for simplicity.
+// In a real-world application, you would split the components into separate files.
+
 import { useState } from 'react';
 
 interface ItemListProps {

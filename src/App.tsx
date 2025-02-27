@@ -4,7 +4,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import FormAdvanced from './components/form/FormAdvanced';
 // import Timer from './use-cases/Timer';
 // import BlogPostApp from './use-cases/BlogPostApp';
-// import RenderComponent from './use-cases/RenderComponent';
+// import RenderComponentExample from './use-cases/RenderComponentExample';
 // import UsePromiseExample from './use-cases/UsePromiseExample';
 // import DebounceExample from './use-cases/DebounceExample';
 // import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
@@ -12,6 +12,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import ContextApiExample from './use-cases/ContextApiExample';
 // import SearchComponentExample from './use-cases/SearchComponentExample';
 // import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
+// import ReactRouterExample from './use-cases/ReactRouterExample';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
 
       {/* Chapter 3 examples */}
       {/* <BlogPostApp /> */}
-      {/* <RenderComponent /> */}
+      {/* <RenderComponentExample /> */}
       {/* <UsePromiseExample /> */}
       {/* <DebounceExample /> */}
       {/* <DeclarativeUiExample /> */}
@@ -33,6 +34,9 @@ function App() {
       {/* <ContextApiExample /> */}
       {/* <SearchComponentExample /> */}
       {/* <ErrorBoundaryExample /> */}
+
+      {/* Chapter 4 examples */}
+      {/* <ReactRouterExample /> */}
     </>
   );
 }

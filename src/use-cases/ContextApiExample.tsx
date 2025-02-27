@@ -1,3 +1,6 @@
+// This example is contained in a single file for simplicity.
+// In a real-world application, you would split the components into separate files.
+
 import { createContext, useContext } from 'react';
 
 type DataProps = {

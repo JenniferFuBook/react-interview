@@ -1,3 +1,6 @@
+// This example is contained in a single file for simplicity.
+// In a real-world application, you would split the components into separate files.
+
 import {
   Profiler,
   ProfilerOnRenderCallback,
@@ -58,7 +61,7 @@ const ParentComponent: React.FC<ParentComponentProps> = ({ count }) => {
 };
 
 // Define the main app component
-const RenderComponent: React.FC = () => {
+const RenderComponentExample: React.FC = () => {
   const [count, setCount] = useState<number>(0); // Track the count state
   const [theme, setTheme] = useState<string>('black'); // Tract the theme state
 
@@ -81,4 +84,4 @@ const RenderComponent: React.FC = () => {
   );
 };
 
-export default RenderComponent;
+export default RenderComponentExample;
