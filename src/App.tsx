@@ -5,12 +5,12 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import Timer from './use-cases/Timer';
 // import BlogPostApp from './use-cases/BlogPostApp';
 // import RenderComponentExample from './use-cases/RenderComponentExample';
-// import UsePromiseExample from './use-cases/UsePromiseExample';
-// import DebounceExample from './use-cases/DebounceExample';
 // import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
 // import PropDrillingExample from './use-cases/PropDrillingExample';
 // import ContextApiExample from './use-cases/ContextApiExample';
 // import SearchComponentExample from './use-cases/SearchComponentExample';
+// import UsePromiseExample from './use-cases/UsePromiseExample';
+// import DebounceExample from './use-cases/DebounceExample';
 // import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
 // import ReactRouterExample from './use-cases/ReactRouterExample';
 
@@ -27,14 +27,14 @@ function App() {
       {/* Chapter 3 examples */}
       {/* <BlogPostApp /> */}
       {/* <RenderComponentExample /> */}
-      {/* <UsePromiseExample /> */}
-      {/* <DebounceExample /> */}
       {/* <DeclarativeUiExample /> */}
       {/* <PropDrillingExample /> */}
       {/* <ContextApiExample /> */}
       {/* <SearchComponentExample /> */}
+      {/* <UsePromiseExample /> */}
+      {/* <DebounceExample /> */}
       {/* <ErrorBoundaryExample /> */}
-
+     
       {/* Chapter 4 examples */}
       {/* <ReactRouterExample /> */}
     </>
