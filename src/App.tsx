@@ -5,6 +5,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import Timer from './use-cases/Timer';
 // import BlogPostApp from './use-cases/BlogPostApp';
 // import RenderComponentExample from './use-cases/RenderComponentExample';
+// import TooltipExample from './use-cases/TooltipExample';
 // import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
 // import PropDrillingExample from './use-cases/PropDrillingExample';
 // import ContextApiExample from './use-cases/ContextApiExample';
@@ -27,6 +28,7 @@ function App() {
       {/* Chapter 3 examples */}
       {/* <BlogPostApp /> */}
       {/* <RenderComponentExample /> */}
+      {/* <TooltipExample /> */}
       {/* <DeclarativeUiExample /> */}
       {/* <PropDrillingExample /> */}
       {/* <ContextApiExample /> */}
