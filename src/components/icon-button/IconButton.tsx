@@ -15,7 +15,7 @@ const IconButton: React.FC<IconButtonProps> = ({
 }) => {
   return (
     <button {...props} onClick={handleClick}>
-      <img src={icon} className="icon" alt={altText || 'icon button'} />
+      <img src={icon} className="icon" alt={altText ?? 'icon button'} />
     </button>
   );
 };
