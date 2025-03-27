@@ -1,6 +1,8 @@
 // This example is contained in a single file for simplicity.
 // In a real-world application, you would split the components into separate files.
 
+import './PropDrillingExample.css';
+
 type DataProps = {
   data: string;
 };
@@ -10,7 +12,7 @@ const ParentComponent: React.FC = () => {
   const data = 'Hello from Parent!';
 
   return (
-    <div>
+    <div className='prop-drilling'>
       <h1>Parent Component</h1>
       {/* Pass data to ChildA */}
       <ChildA data={data} />
