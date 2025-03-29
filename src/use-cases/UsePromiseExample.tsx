@@ -24,8 +24,9 @@ const getWeekNames = () =>
 const weekNamesPromise = getWeekNames();
 
 const WeekView: React.FC = () => {
+  // Use the created Promise to avoid creating a new Promise during every render
   const [getWeekNamesPromise, setGetWeekNamesPromise] =
-    useState(weekNamesPromise); // Avoid creating a new Promise during every render
+    useState(weekNamesPromise); 
   const weekNames = use(getWeekNamesPromise);
 
   return (
