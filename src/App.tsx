@@ -16,6 +16,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import DebounceExample from './use-cases/DebounceExample';
 // import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
 // import ReactRouterExample from './use-cases/ReactRouterExample';
+// import NestedRoutesExample from './use-cases/NestedRoutesExample';
 // import ProtectedRouteExample from './use-cases/ProtectedRouteExample';
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
      
       {/* Chapter 4 examples */}
       {/* <ReactRouterExample /> */}
+      {/* <NestedRoutesExample /> */}
       {/* <ProtectedRouteExample /> */}
     </>
   );
