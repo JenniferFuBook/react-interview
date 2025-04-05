@@ -1,3 +1,4 @@
+// import GlobalStyle from './styles/GlobalStyle';
 import BlogPostExample from './use-cases/BlogPostExample';
 // import CssSpecificityExample from './use-cases/CssSpecificityExample';
 // import YouTubeApiExample from './use-cases/YouTubeApiExample';
@@ -22,6 +23,8 @@ import BlogPostExample from './use-cases/BlogPostExample';
 function App() {
   return (
     <>
+      {/* <GlobalStyle /> */}
+      
       {/* Chapter 2 examples */}
       <BlogPostExample />
       {/* <CssSpecificityExample /> */}

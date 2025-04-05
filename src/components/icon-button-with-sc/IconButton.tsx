@@ -14,8 +14,8 @@ const IconButton: React.FC<IconButtonProps> = ({
   ...props
 }) => {
   return (
-    <Styled.Button {...props} onClick={handleClick}> // Use the styled button component
-      <Styled.Img src={icon} alt={altText || 'icon button'} /> // Use the styled img component
+    <Styled.Button {...props} onClick={handleClick}> {/* Use the styled button component */}
+      <Styled.Img src={icon} alt={altText || 'icon button'} /> {/* Use the styled img component */}
     </Styled.Button>
   );
 };
