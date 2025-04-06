@@ -1,1 +1,7 @@
 @import 'tailwindcss';
+
+/* The above import statement is equivalent to the following four statements. */
+/* @layer theme, base, components, utilities; */
+/* @import "tailwindcss/theme.css" layer(theme); */
+/* Do not enable this line to avoid global styles: @import "tailwindcss/preflight.css" layer(base); 
+/* @import "tailwindcss/utilities.css" layer(utilities); */
