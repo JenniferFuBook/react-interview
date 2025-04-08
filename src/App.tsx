@@ -19,6 +19,8 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import ReactRouterExample from './use-cases/ReactRouterExample';
 // import NestedRoutesExample from './use-cases/NestedRoutesExample';
 // import ProtectedRouteExample from './use-cases/ProtectedRouteExample';
+// import ReactWindowFixedSizeListExample from './use-cases/ReactWindowFixedSizeListExample';
+// import ReactWindowVariableSizeGridExample from './use-cases/ReactWindowVariableSizeGridExample';
 
 function App() {
   return (
@@ -50,6 +52,8 @@ function App() {
       {/* <ReactRouterExample /> */}
       {/* <NestedRoutesExample /> */}
       {/* <ProtectedRouteExample /> */}
+      {/* <ReactWindowFixedSizeListExample /> */}
+      {/* <ReactWindowVariableSizeGridExample /> */}
     </>
   );
 }
