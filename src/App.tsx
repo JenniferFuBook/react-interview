@@ -22,6 +22,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import ReactWindowFixedSizeListExample from './use-cases/ReactWindowFixedSizeListExample';
 // import ReactWindowVariableSizeGridExample from './use-cases/ReactWindowVariableSizeGridExample';
 // import ReactVirtualizedListExample from './use-cases/ReactVirtualizedListExample';
+// import ReactVirtuosoListExample from './use-cases/ReactVirtuosoListExample';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
       {/* <ReactWindowFixedSizeListExample /> */}
       {/* <ReactWindowVariableSizeGridExample /> */}
       {/* <ReactVirtualizedListExample /> */}
+      {/* <ReactVirtuosoListExample /> */}
     </>
   );
 }
