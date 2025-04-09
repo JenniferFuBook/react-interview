@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.11",
-    "@types/youtube": "^0.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.2.0",
+    "react-virtualized": "^9.22.6",
     "react-window": "^1.8.11",
     "styled-components": "^6.1.15",
     "tailwindcss": "^4.0.11"
@@ -23,7 +23,9 @@
     "@eslint/js": "^9.17.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "@types/react-virtualized": "^9.22.2",
     "@types/react-window": "^1.8.8",
+    "@types/youtube": "^0.1.0",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.17.0",
     "eslint-plugin-react-hooks": "^5.0.0",

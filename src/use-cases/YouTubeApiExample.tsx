@@ -34,8 +34,8 @@ const YouTubeApiExample: React.FC = () => {
               event.target.playVideo(),
           },
           playerVars: { // Set autoplay and mute the video
-            autoplay: YT.AutoPlay.AutoPlay,
-            mute: YT.Mute.Muted,
+            autoplay: YT.AutoPlay?.AutoPlay ?? 1, // in case enum is not available at runtime
+            mute: YT.Mute?.Muted ?? 1, // in case enum is not available at runtime
           },
         });
       }
