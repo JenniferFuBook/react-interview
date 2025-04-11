@@ -23,6 +23,7 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import ReactWindowVariableSizeGridExample from './use-cases/ReactWindowVariableSizeGridExample';
 // import ReactVirtualizedListExample from './use-cases/ReactVirtualizedListExample';
 // import ReactVirtuosoListExample from './use-cases/ReactVirtuosoListExample';
+// import FormSimpleWithAxios from './components/form/FormSimpleWithAxios';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
       {/* <ReactWindowVariableSizeGridExample /> */}
       {/* <ReactVirtualizedListExample /> */}
       {/* <ReactVirtuosoListExample /> */}
+      {/* <FormSimpleWithAxios /> */}
     </>
   );
 }
