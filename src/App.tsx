@@ -24,6 +24,8 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import ReactVirtualizedListExample from './use-cases/ReactVirtualizedListExample';
 // import ReactVirtuosoListExample from './use-cases/ReactVirtuosoListExample';
 // import FormSimpleWithAxios from './components/form/FormSimpleWithAxios';
+// import TanStackUseQueryExample from './use-cases/TanStackUseQueryExample';
+// import TanStackUseMutationExample from './use-cases/TanStackUseMutationExample';
 
 function App() {
   return (
@@ -60,6 +62,8 @@ function App() {
       {/* <ReactVirtualizedListExample /> */}
       {/* <ReactVirtuosoListExample /> */}
       {/* <FormSimpleWithAxios /> */}
+      {/* <TanStackUseQueryExample /> */}
+      {/* <TanStackUseMutationExample /> */}
     </>
   );
 }
