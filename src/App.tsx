@@ -26,6 +26,8 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import FormSimpleWithAxios from './components/form/FormSimpleWithAxios';
 // import TanStackUseQueryExample from './use-cases/TanStackUseQueryExample';
 // import TanStackUseMutationExample from './use-cases/TanStackUseMutationExample';
+// import GraphQLExample from './use-cases/GraphQLExample';
+import FaviconExample from './use-cases/FaviconExample';
 
 function App() {
   return (
@@ -33,7 +35,7 @@ function App() {
       {/* <GlobalStyle /> */}
       
       {/* Chapter 2 examples */}
-      <BlogPostExample />
+      {/* <BlogPostExample /> */}
       {/* <CssSpecificityExample /> */}
       {/* <YouTubeApiExample /> */}
       {/* <DragAndDrop /> */}
@@ -64,6 +66,8 @@ function App() {
       {/* <FormSimpleWithAxios /> */}
       {/* <TanStackUseQueryExample /> */}
       {/* <TanStackUseMutationExample /> */}
+      {/* <GraphQLExample /> */}
+      <FaviconExample />
     </>
   );
 }
