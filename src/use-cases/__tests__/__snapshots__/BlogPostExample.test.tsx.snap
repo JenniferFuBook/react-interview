@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogPostExample matches snapshot 1`] = `
+<div>
+  <main>
+    <article>
+      <header>
+        <h1>
+          My Favorite Article
+        </h1>
+        <h2>
+          A demonstration of semantic HTML elements
+        </h2>
+      </header>
+      <section>
+        <h3>
+          Introduction
+        </h3>
+        <div>
+          <h4>
+            What is React?
+          </h4>
+          <p>
+            React is a JavaScript library for building user interfaces. React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page.
+          </p>
+        </div>
+        <div>
+          <h4>
+            Why use React?
+          </h4>
+          <p>
+            React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable and easier to debug.
+          </p>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>
+      © 2025 My Website. All rights reserved.
+    </p>
+  </footer>
+</div>
+`;
