@@ -20,8 +20,9 @@ const Row: ListRowRenderer = ({ index, style }) => {
 
 const ReactVirtualizedListExample: React.FC = () => {
   return (
-    <AutoSizer disableHeight> // AutoSizer automatically sets the width of the list
-      // based on the width of the parent container.
+    // AutoSizer automatically sets the width of the list
+    // based on the width of the parent container.
+    <AutoSizer disableHeight>
       {({ width }) => (
         <List
           height={350} // height of the list
@@ -35,6 +36,6 @@ const ReactVirtualizedListExample: React.FC = () => {
       )}
     </AutoSizer>
   );
-}
+};
 
 export default ReactVirtualizedListExample;

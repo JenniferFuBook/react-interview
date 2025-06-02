@@ -38,7 +38,7 @@ const InvalidateQueriesExample: React.FC = () => {
   const isFetching = useIsFetching();
 
   const handleRefetch = () => {
-    queryClient.invalidateQueries(['catFact']); // This will refetch the query
+    queryClient.invalidateQueries({ queryKey: ['catFact'] }); // This will refetch the query
   };
 
   return (

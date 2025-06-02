@@ -1,11 +1,11 @@
 import { useActionState } from 'react';
-import { FormState, FormData } from './types.ts';
-import { validateName, validateEmail } from './utils.ts';
+import { FormState, FormData } from './types';
+import { validateName, validateEmail } from './utils';
 import './index.css';
 
 const Form: React.FC = () => {
   const [state, formAction, isPending] = useActionState<FormState, FormData>(
-    async (prevState, formData: FormData) => {
+    async (_prevState, formData: FormData) => {
       const name = formData.get('name') as string;
       const email = formData.get('email') as string;
       // Validate name

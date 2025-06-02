@@ -21,7 +21,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "./jest.setup.ts"],
+  "include": ["dist", "./jest.setup.ts"],
+  "exclude": ["node_modules"],
+  "outDir": "dist",
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

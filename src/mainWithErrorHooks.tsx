@@ -1,7 +1,7 @@
 import { StrictMode, ErrorInfo } from 'react';
 import { createRoot } from 'react-dom/client';
+import App from './App';
 import './index.css';
-import App from './App.tsx';
 
 function onCaughtError(error: any, errorInfo: ErrorInfo) {
   console.error('In onCaughtError', error, errorInfo.componentStack);

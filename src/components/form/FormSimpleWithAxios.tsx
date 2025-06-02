@@ -1,11 +1,11 @@
 import { useActionState } from 'react';
-import { FormState, FormData } from './types.ts';
+import { FormState, FormData } from './types';
 import './index.css';
 import axios from 'axios';
 
 const Form: React.FC = () => {
   const [state, formAction, isPending] = useActionState<FormState, FormData>(
-    async (prevState, formData: FormData) => {
+    async (_prevState, formData: FormData) => {
       try {
         // Send the form data using fetch API
         const response = await axios.post('https://api.web3forms.com/submit', {
