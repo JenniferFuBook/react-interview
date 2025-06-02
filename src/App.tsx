@@ -1,6 +1,6 @@
 // import GlobalStyle from './styles/GlobalStyle';
 import BlogPostExample from './use-cases/BlogPostExample';
-// import CssSpecificityExample from './use-cases/CssSpecificityExample';
+import CssSpecificityExample from './use-cases/CssSpecificityExample';
 // import YouTubeApiExample from './use-cases/YouTubeApiExample';
 // import DragAndDrop from './components/drag-and-drop/DragAndDrop';
 // import FormSimple from './components/form/FormSimple';
@@ -30,13 +30,17 @@ import BlogPostExample from './use-cases/BlogPostExample';
 // import FaviconExample from './use-cases/FaviconExample';
 
 function App() {
+  const exampleName = import.meta.env.VITE_NAME || 'BlogPostExample'; 
+  // exampleName is Default to BlogPostExample if not set in environment variables
+  // you can also hardcode it to any example you want to test, e.g., 'CssSpecificityExample'
+
   return (
     <>
       {/* <GlobalStyle /> */}
       
       {/* Chapter 2 examples */}
-      <BlogPostExample />
-      {/* <CssSpecificityExample /> */}
+      {exampleName === 'BlogPostExample' && <BlogPostExample />}
+      {exampleName === 'CssSpecificityExample' && <CssSpecificityExample />}
       {/* <YouTubeApiExample /> */}
       {/* <DragAndDrop /> */}
       {/* <FormSimple /> */}
