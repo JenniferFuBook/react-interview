@@ -4,8 +4,8 @@ import CssSpecificityExample from './use-cases/CssSpecificityExample';
 import DragAndDrop from './components/drag-and-drop/DragAndDrop';
 import FormSimple from './components/form/FormSimple';
 import FormAdvanced from './components/form/FormAdvanced';
-// import YouTubeApiExample from './use-cases/YouTubeApiExample';
-// import Timer from './use-cases/Timer';
+import Timer from './use-cases/Timer';
+import YouTubeApiExample from './use-cases/YouTubeApiExample';
 // import BlogPostApp from './use-cases/BlogPostApp';
 // import RenderComponentExample from './use-cases/RenderComponentExample';
 // import TooltipExample from './use-cases/TooltipExample';
@@ -44,8 +44,9 @@ function App() {
       {exampleName === 'DragAndDrop' && <DragAndDrop />}
       {exampleName === 'FormSimple' && <FormSimple />}
       {exampleName === 'FormAdvanced' && <FormAdvanced />}
-      {/* <YouTubeApiExample /> */}
-      {/* <Timer /> */}
+      {exampleName === 'Timer' && <Timer />}
+      {exampleName === 'YouTubeApiExample' && <YouTubeApiExample />}
+      
 
       {/* Chapter 3 examples */}
       {/* <BlogPostApp /> */}
