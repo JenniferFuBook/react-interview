@@ -1,6 +1,5 @@
 import { useActionState } from 'react';
 import { FormState, FormData } from './types';
-import './index.css';
 
 const Form: React.FC = () => {
   // Define the form state and action using useActionState hook

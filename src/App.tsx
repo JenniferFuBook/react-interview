@@ -44,11 +44,13 @@ function App() {
       {exampleName === 'DragAndDrop' && <DragAndDrop />}
       {exampleName === 'FormSimple' && <FormSimple />}
       {exampleName === 'FormAdvanced' && <FormAdvanced />}
+
+      {/* Chapter 3 examples */}
       {exampleName === 'Timer' && <Timer />}
       {exampleName === 'YouTubeApiExample' && <YouTubeApiExample />}
       
 
-      {/* Chapter 3 examples */}
+      {/* Chapter X examples */}
       {/* <BlogPostApp /> */}
       {/* <RenderComponentExample /> */}
       {/* <TooltipExample /> */}
