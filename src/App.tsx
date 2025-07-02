@@ -1,3 +1,13 @@
+/**
+ * @file App.tsx
+ * @description Main entry point for the React application.
+ * This project serves as the coding repository for the book "Acing the Frontend Interview".
+ * To run a specific example, use the following command:
+ *   VITE_NAME=<ExampleName> npm run dev
+ * Replace <ExampleName> with the desired example name.
+ * @author Jennifer Fu
+ */
+
 // import GlobalStyle from './styles/GlobalStyle';
 import BlogPostExample from './use-cases/BlogPostExample';
 import CssSpecificityExample from './use-cases/CssSpecificityExample';
@@ -6,7 +16,7 @@ import FormSimple from './components/form/FormSimple';
 import FormAdvanced from './components/form/FormAdvanced';
 import Timer from './use-cases/Timer';
 import YouTubeApiExample from './use-cases/YouTubeApiExample';
-// import BlogPostApp from './use-cases/BlogPostApp';
+import BlogPostApp from './use-cases/BlogPostApp';
 // import RenderComponentExample from './use-cases/RenderComponentExample';
 // import TooltipExample from './use-cases/TooltipExample';
 // import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
@@ -50,8 +60,9 @@ function App() {
       {exampleName === 'YouTubeApiExample' && <YouTubeApiExample />}
       
 
-      {/* Chapter X examples */}
-      {/* <BlogPostApp /> */}
+      {/* Chapter 4 examples */}
+      {exampleName === 'BlogPostApp' && <BlogPostApp />}
+
       {/* <RenderComponentExample /> */}
       {/* <TooltipExample /> */}
       {/* <DeclarativeUiExample /> */}
