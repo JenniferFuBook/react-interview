@@ -16,12 +16,12 @@ import FormSimple from './components/form/FormSimple';
 import FormAdvanced from './components/form/FormAdvanced';
 import Timer from './use-cases/Timer';
 import YouTubeApiExample from './use-cases/YouTubeApiExample';
+import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
 import BlogPostApp from './use-cases/BlogPostApp';
+import PropDrillingExample from './use-cases/PropDrillingExample';
+import ContextApiExample from './use-cases/ContextApiExample';
 // import RenderComponentExample from './use-cases/RenderComponentExample';
 // import TooltipExample from './use-cases/TooltipExample';
-// import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
-// import PropDrillingExample from './use-cases/PropDrillingExample';
-// import ContextApiExample from './use-cases/ContextApiExample';
 // import SearchComponentExample from './use-cases/SearchComponentExample';
 // import UsePromiseExample from './use-cases/UsePromiseExample';
 // import DebounceExample from './use-cases/DebounceExample';
@@ -58,16 +58,14 @@ function App() {
       {/* Chapter 3 examples */}
       {exampleName === 'Timer' && <Timer />}
       {exampleName === 'YouTubeApiExample' && <YouTubeApiExample />}
-      
-
+  
       {/* Chapter 4 examples */}
+      {exampleName === 'DeclarativeUiExample' && <DeclarativeUiExample />}
       {exampleName === 'BlogPostApp' && <BlogPostApp />}
-
+      {exampleName === 'PropDrillingExample' && <PropDrillingExample />}
+      {exampleName === 'ContextApiExample' && <ContextApiExample />}
       {/* <RenderComponentExample /> */}
       {/* <TooltipExample /> */}
-      {/* <DeclarativeUiExample /> */}
-      {/* <PropDrillingExample /> */}
-      {/* <ContextApiExample /> */}
       {/* <SearchComponentExample /> */}
       {/* <UsePromiseExample /> */}
       {/* <DebounceExample /> */}
