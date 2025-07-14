@@ -7,7 +7,6 @@
  * Replace <ExampleName> with the desired example name.
  * @author Jennifer Fu
  */
-
 // import GlobalStyle from './styles/GlobalStyle';
 import BlogPostExample from './use-cases/BlogPostExample';
 import CssSpecificityExample from './use-cases/CssSpecificityExample';
@@ -20,11 +19,11 @@ import DeclarativeUiExample from './use-cases/DeclarativeUiExample';
 import BlogPostApp from './use-cases/BlogPostApp';
 import PropDrillingExample from './use-cases/PropDrillingExample';
 import ContextApiExample from './use-cases/ContextApiExample';
-// import RenderComponentExample from './use-cases/RenderComponentExample';
-// import TooltipExample from './use-cases/TooltipExample';
-// import SearchComponentExample from './use-cases/SearchComponentExample';
-// import UsePromiseExample from './use-cases/UsePromiseExample';
-// import DebounceExample from './use-cases/DebounceExample';
+import SearchComponentExample from './use-cases/SearchComponentExample';
+import RenderComponentExample from './use-cases/RenderComponentExample';
+import UsePromiseExample from './use-cases/UsePromiseExample';
+import DebounceExample from './use-cases/DebounceExample';
+import TooltipExample from './use-cases/TooltipExample';
 // import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
 // import ReactRouterExample from './use-cases/ReactRouterExample';
 // import NestedRoutesExample from './use-cases/NestedRoutesExample';
@@ -59,16 +58,17 @@ function App() {
       {exampleName === 'Timer' && <Timer />}
       {exampleName === 'YouTubeApiExample' && <YouTubeApiExample />}
   
-      {/* Chapter 4 examples */}
+      {/* Chapter 4, Appendix F, and appendix G examples */}
       {exampleName === 'DeclarativeUiExample' && <DeclarativeUiExample />}
       {exampleName === 'BlogPostApp' && <BlogPostApp />}
       {exampleName === 'PropDrillingExample' && <PropDrillingExample />}
       {exampleName === 'ContextApiExample' && <ContextApiExample />}
-      {/* <RenderComponentExample /> */}
-      {/* <TooltipExample /> */}
-      {/* <SearchComponentExample /> */}
-      {/* <UsePromiseExample /> */}
-      {/* <DebounceExample /> */}
+      {exampleName === 'SearchComponentExample' && <SearchComponentExample />}
+      {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
+      {exampleName === 'UsePromiseExample' && <UsePromiseExample />}
+      {exampleName === 'DebounceExample' && <DebounceExample />}
+      {exampleName === 'TooltipExample' && <TooltipExample />}
+      
       {/* <ErrorBoundaryExample /> */}
      
       {/* Chapter 4 examples */}

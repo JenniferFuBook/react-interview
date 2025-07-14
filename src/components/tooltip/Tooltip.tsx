@@ -1,4 +1,7 @@
 import { useState, useLayoutEffect, RefObject } from 'react';
+import { simulateHeavyPaint } from './utils'; 
+
+const DELAY = 100; // Simulated delay for heavy paint operation
 
 type Position = {
   top: number;
@@ -16,6 +19,7 @@ const Tooltip: React.FC<TooltipProps> = ({ text, ref }) => {
   // useLayoutEffect should be used when you need to read from the DOM and 
   // synchronously apply the changes before the browser has a chance to paint
   useLayoutEffect(() => { 
+    simulateHeavyPaint(DELAY); // Simulate a heavy paint operation
     if (ref.current) {
       // Calculate and set the position of the tooltip
       const rect = ref.current.getBoundingClientRect();
