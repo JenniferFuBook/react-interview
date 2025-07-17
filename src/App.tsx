@@ -27,8 +27,8 @@ import TooltipExample from './use-cases/TooltipExample';
 import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
 import ModularRouteApp from './use-cases/ModularRouteApp';
 import ReactRouterExample from './use-cases/ReactRouterExample';
-// import NestedRoutesExample from './use-cases/NestedRoutesExample';
-// import ProtectedRouteExample from './use-cases/ProtectedRouteExample';
+import NestedRoutesExample from './use-cases/NestedRoutesExample';
+import ProtectedRouteExample from './use-cases/ProtectedRouteExample';
 // import ReactWindowFixedSizeListExample from './use-cases/ReactWindowFixedSizeListExample';
 // import ReactWindowVariableSizeGridExample from './use-cases/ReactWindowVariableSizeGridExample';
 // import ReactVirtualizedListExample from './use-cases/ReactVirtualizedListExample';
@@ -72,8 +72,8 @@ function App() {
       {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
       {exampleName === 'ModularRouteApp' && <ModularRouteApp />}
       {exampleName === 'ReactRouterExample' && <ReactRouterExample />}
-      {/* <NestedRoutesExample /> */}
-      {/* <ProtectedRouteExample /> */}
+      {exampleName === 'NestedRoutesExample' && <NestedRoutesExample />}
+      {exampleName === 'ProtectedRouteExample' && <ProtectedRouteExample />}
       {/* <ReactWindowFixedSizeListExample /> */}
       {/* <ReactWindowVariableSizeGridExample /> */}
       {/* <ReactVirtualizedListExample /> */}
