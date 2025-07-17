@@ -24,8 +24,9 @@ import RenderComponentExample from './use-cases/RenderComponentExample';
 import UsePromiseExample from './use-cases/UsePromiseExample';
 import DebounceExample from './use-cases/DebounceExample';
 import TooltipExample from './use-cases/TooltipExample';
-// import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
-// import ReactRouterExample from './use-cases/ReactRouterExample';
+import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
+import ModularRouteApp from './use-cases/ModularRouteApp';
+import ReactRouterExample from './use-cases/ReactRouterExample';
 // import NestedRoutesExample from './use-cases/NestedRoutesExample';
 // import ProtectedRouteExample from './use-cases/ProtectedRouteExample';
 // import ReactWindowFixedSizeListExample from './use-cases/ReactWindowFixedSizeListExample';
@@ -58,7 +59,7 @@ function App() {
       {exampleName === 'Timer' && <Timer />}
       {exampleName === 'YouTubeApiExample' && <YouTubeApiExample />}
   
-      {/* Chapter 4, Appendix F, and appendix G examples */}
+      {/* Chapter 4, Appendix F, appendix G, and appendix H examples */}
       {exampleName === 'DeclarativeUiExample' && <DeclarativeUiExample />}
       {exampleName === 'BlogPostApp' && <BlogPostApp />}
       {exampleName === 'PropDrillingExample' && <PropDrillingExample />}
@@ -68,11 +69,9 @@ function App() {
       {exampleName === 'UsePromiseExample' && <UsePromiseExample />}
       {exampleName === 'DebounceExample' && <DebounceExample />}
       {exampleName === 'TooltipExample' && <TooltipExample />}
-      
-      {/* <ErrorBoundaryExample /> */}
-     
-      {/* Chapter 4 examples */}
-      {/* <ReactRouterExample /> */}
+      {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
+      {exampleName === 'ModularRouteApp' && <ModularRouteApp />}
+      {exampleName === 'ReactRouterExample' && <ReactRouterExample />}
       {/* <NestedRoutesExample /> */}
       {/* <ProtectedRouteExample /> */}
       {/* <ReactWindowFixedSizeListExample /> */}
