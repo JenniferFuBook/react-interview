@@ -20,11 +20,11 @@ import BlogPostApp from './use-cases/BlogPostApp';
 import PropDrillingExample from './use-cases/PropDrillingExample';
 import ContextApiExample from './use-cases/ContextApiExample';
 import SearchComponentExample from './use-cases/SearchComponentExample';
-import RenderComponentExample from './use-cases/RenderComponentExample';
 import UsePromiseExample from './use-cases/UsePromiseExample';
 import DebounceExample from './use-cases/DebounceExample';
 import TooltipExample from './use-cases/TooltipExample';
 import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
+import RenderComponentExample from './use-cases/RenderComponentExample';
 import ModularRouteApp from './use-cases/ModularRouteApp';
 import ReactRouterExample from './use-cases/ReactRouterExample';
 import NestedRoutesExample from './use-cases/NestedRoutesExample';
@@ -65,11 +65,13 @@ function App() {
       {exampleName === 'PropDrillingExample' && <PropDrillingExample />}
       {exampleName === 'ContextApiExample' && <ContextApiExample />}
       {exampleName === 'SearchComponentExample' && <SearchComponentExample />}
-      {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
       {exampleName === 'UsePromiseExample' && <UsePromiseExample />}
       {exampleName === 'DebounceExample' && <DebounceExample />}
       {exampleName === 'TooltipExample' && <TooltipExample />}
       {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
+      {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
+
+      {/* Chapter 5 examples */}
       {exampleName === 'ModularRouteApp' && <ModularRouteApp />}
       {exampleName === 'ReactRouterExample' && <ReactRouterExample />}
       {exampleName === 'NestedRoutesExample' && <NestedRoutesExample />}
