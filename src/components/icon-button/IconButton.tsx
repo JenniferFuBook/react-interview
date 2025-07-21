@@ -1,5 +1,4 @@
-import { MouseEventHandler } from 'react';
-import './index.css';
+import { MouseEventHandler, useEffect } from 'react';
 
 type IconButtonProps = {
   icon: string;
@@ -13,6 +12,9 @@ const IconButton: React.FC<IconButtonProps> = ({
   handleClick,
   ...props
 }) => {
+  useEffect(() => {
+    import('./index.css'); // Dynamically import the CSS file to prevent interference with global styles
+  }, []);
   return (
     <button {...props} onClick={handleClick}>
       <img src={icon} className="icon" alt={altText ?? 'icon button'} />

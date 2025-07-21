@@ -29,6 +29,8 @@ import ModularRouteApp from './use-cases/ModularRouteApp';
 import ReactRouterExample from './use-cases/ReactRouterExample';
 import NestedRoutesExample from './use-cases/NestedRoutesExample';
 import ProtectedRouteExample from './use-cases/ProtectedRouteExample';
+import AntDThemeExample from './use-cases/AntDThemeExample';
+import AutoAntDThemeExample from './use-cases/AutoAntDThemeExample';
 // import ReactWindowFixedSizeListExample from './use-cases/ReactWindowFixedSizeListExample';
 // import ReactWindowVariableSizeGridExample from './use-cases/ReactWindowVariableSizeGridExample';
 // import ReactVirtualizedListExample from './use-cases/ReactVirtualizedListExample';
@@ -76,6 +78,19 @@ function App() {
       {exampleName === 'ReactRouterExample' && <ReactRouterExample />}
       {exampleName === 'NestedRoutesExample' && <NestedRoutesExample />}
       {exampleName === 'ProtectedRouteExample' && <ProtectedRouteExample />}
+      {exampleName === 'AntDThemeExample' && <AntDThemeExample />}
+      {exampleName === 'AutoAntDThemeExample' && <AutoAntDThemeExample />}
+
+      {/* Uncomment the following lines to test additional examples */}
+      {/* <ReactWindowFixedSizeListExample /> */}
+      {/* <ReactWindowVariableSizeGridExample /> */}
+      {/* <ReactVirtualizedListExample /> */}
+      {/* <ReactVirtuosoListExample /> */}
+      {/* <FormSimpleWithAxios /> */}
+      {/* <TanStackUseQueryExample /> */}
+      {/* <TanStackUseMutationExample /> */}
+      {/* <GraphQLExample /> */}
+      {/* <FaviconExample /> */}
       {/* <ReactWindowFixedSizeListExample /> */}
       {/* <ReactWindowVariableSizeGridExample /> */}
       {/* <ReactVirtualizedListExample /> */}
