@@ -31,10 +31,10 @@ import NestedRoutesExample from './use-cases/NestedRoutesExample';
 import ProtectedRouteExample from './use-cases/ProtectedRouteExample';
 import AntDThemeExample from './use-cases/AntDThemeExample';
 import AutoAntDThemeExample from './use-cases/AutoAntDThemeExample';
-// import ReactWindowFixedSizeListExample from './use-cases/ReactWindowFixedSizeListExample';
-// import ReactWindowVariableSizeGridExample from './use-cases/ReactWindowVariableSizeGridExample';
-// import ReactVirtualizedListExample from './use-cases/ReactVirtualizedListExample';
-// import ReactVirtuosoListExample from './use-cases/ReactVirtuosoListExample';
+import ReactWindowFixedSizeListExample from './use-cases/ReactWindowFixedSizeListExample';
+import ReactWindowVariableSizeGridExample from './use-cases/ReactWindowVariableSizeGridExample';
+import ReactVirtualizedListExample from './use-cases/ReactVirtualizedListExample';
+import ReactVirtuosoListExample from './use-cases/ReactVirtuosoListExample';
 // import FormSimpleWithAxios from './components/form/FormSimpleWithAxios';
 // import TanStackUseQueryExample from './use-cases/TanStackUseQueryExample';
 // import TanStackUseMutationExample from './use-cases/TanStackUseMutationExample';
@@ -73,13 +73,17 @@ function App() {
       {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
       {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
 
-      {/* Chapter 5 examples */}
+      {/* Chapter 5, Appendix J examples */}
       {exampleName === 'ModularRouteApp' && <ModularRouteApp />}
       {exampleName === 'ReactRouterExample' && <ReactRouterExample />}
       {exampleName === 'NestedRoutesExample' && <NestedRoutesExample />}
       {exampleName === 'ProtectedRouteExample' && <ProtectedRouteExample />}
       {exampleName === 'AntDThemeExample' && <AntDThemeExample />}
       {exampleName === 'AutoAntDThemeExample' && <AutoAntDThemeExample />}
+      {exampleName === 'ReactWindowFixedSizeListExample' && <ReactWindowFixedSizeListExample />}
+      {exampleName === 'ReactWindowVariableSizeGridExample' && <ReactWindowVariableSizeGridExample />}
+      {exampleName === 'ReactVirtualizedListExample' && <ReactVirtualizedListExample />}
+      {exampleName === 'ReactVirtuosoListExample' && <ReactVirtuosoListExample />}
 
       {/* Uncomment the following lines to test additional examples */}
       {/* <ReactWindowFixedSizeListExample /> */}
