@@ -20,11 +20,8 @@ import BlogPostApp from './use-cases/BlogPostApp';
 import PropDrillingExample from './use-cases/PropDrillingExample';
 import ContextApiExample from './use-cases/ContextApiExample';
 import SearchComponentExample from './use-cases/SearchComponentExample';
-import UsePromiseExample from './use-cases/UsePromiseExample';
 import DebounceExample from './use-cases/DebounceExample';
 import TooltipExample from './use-cases/TooltipExample';
-import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
-import RenderComponentExample from './use-cases/RenderComponentExample';
 import ModularRouteApp from './use-cases/ModularRouteApp';
 import ReactRouterExample from './use-cases/ReactRouterExample';
 import NestedRoutesExample from './use-cases/NestedRoutesExample';
@@ -40,6 +37,9 @@ import TanStackUseQueryExample from './use-cases/TanStackUseQueryExample';
 import TanStackUseMutationExample from './use-cases/TanStackUseMutationExample';
 import GraphQLExample from './use-cases/GraphQLExample';
 import FaviconExample from './use-cases/FaviconExample';
+import RenderComponentExample from './use-cases/RenderComponentExample';
+import UsePromiseExample from './use-cases/UsePromiseExample';
+import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
 
 function App() {
   const exampleName = import.meta.env.VITE_NAME || 'BlogPostExample'; 
@@ -61,19 +61,16 @@ function App() {
       {exampleName === 'Timer' && <Timer />}
       {exampleName === 'YouTubeApiExample' && <YouTubeApiExample />}
   
-      {/* Chapter 4, Appendix F, appendix G, and appendix H examples */}
+      {/* Chapter 4 examples */}
       {exampleName === 'DeclarativeUiExample' && <DeclarativeUiExample />}
       {exampleName === 'BlogPostApp' && <BlogPostApp />}
       {exampleName === 'PropDrillingExample' && <PropDrillingExample />}
       {exampleName === 'ContextApiExample' && <ContextApiExample />}
       {exampleName === 'SearchComponentExample' && <SearchComponentExample />}
-      {exampleName === 'UsePromiseExample' && <UsePromiseExample />}
       {exampleName === 'DebounceExample' && <DebounceExample />}
       {exampleName === 'TooltipExample' && <TooltipExample />}
-      {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
-      {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
 
-      {/* Chapter 5, Appendix J, and Appendix K examples */}
+      {/* Chapter 5 examples */}
       {exampleName === 'ModularRouteApp' && <ModularRouteApp />}
       {exampleName === 'ReactRouterExample' && <ReactRouterExample />}
       {exampleName === 'NestedRoutesExample' && <NestedRoutesExample />}
@@ -89,6 +86,11 @@ function App() {
       {exampleName === 'TanStackUseMutationExample' && <TanStackUseMutationExample />}
       {exampleName === 'GraphQLExample' && <GraphQLExample />}
       {exampleName === 'FaviconExample' && <FaviconExample />}
+
+      {/* Appendix A examples */}
+      {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
+      {exampleName === 'UsePromiseExample' && <UsePromiseExample />}
+      {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
     </>
   );
 }
