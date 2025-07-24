@@ -33,7 +33,7 @@ const UseQueryExample: React.FC = () => {
   return <div>{isFetching ? 'Updating...' : data.fact}</div>;
 };
 
-const InvalidateQueriesExample: React.FC = () => {
+const UpdateButton: React.FC = () => {
   const queryClient = useQueryClient();
   const isFetching = useIsFetching();
 
@@ -56,7 +56,7 @@ const TanStackUseQueryExample: React.FC = () => {
     // Must wrap the app with QueryClientProvider to provide the client to the app
     <QueryClientProvider client={queryClient}>
       <UseQueryExample />
-      <InvalidateQueriesExample />
+      <UpdateButton />
     </QueryClientProvider>
   );
 };

@@ -35,11 +35,11 @@ import ReactWindowFixedSizeListExample from './use-cases/ReactWindowFixedSizeLis
 import ReactWindowVariableSizeGridExample from './use-cases/ReactWindowVariableSizeGridExample';
 import ReactVirtualizedListExample from './use-cases/ReactVirtualizedListExample';
 import ReactVirtuosoListExample from './use-cases/ReactVirtuosoListExample';
-// import FormSimpleWithAxios from './components/form/FormSimpleWithAxios';
-// import TanStackUseQueryExample from './use-cases/TanStackUseQueryExample';
-// import TanStackUseMutationExample from './use-cases/TanStackUseMutationExample';
-// import GraphQLExample from './use-cases/GraphQLExample';
-// import FaviconExample from './use-cases/FaviconExample';
+import FormSimpleWithAxios from './components/form/FormSimpleWithAxios';
+import TanStackUseQueryExample from './use-cases/TanStackUseQueryExample';
+import TanStackUseMutationExample from './use-cases/TanStackUseMutationExample';
+import GraphQLExample from './use-cases/GraphQLExample';
+import FaviconExample from './use-cases/FaviconExample';
 
 function App() {
   const exampleName = import.meta.env.VITE_NAME || 'BlogPostExample'; 
@@ -73,7 +73,7 @@ function App() {
       {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
       {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
 
-      {/* Chapter 5, Appendix J examples */}
+      {/* Chapter 5, Appendix J, and Appendix K examples */}
       {exampleName === 'ModularRouteApp' && <ModularRouteApp />}
       {exampleName === 'ReactRouterExample' && <ReactRouterExample />}
       {exampleName === 'NestedRoutesExample' && <NestedRoutesExample />}
@@ -84,26 +84,11 @@ function App() {
       {exampleName === 'ReactWindowVariableSizeGridExample' && <ReactWindowVariableSizeGridExample />}
       {exampleName === 'ReactVirtualizedListExample' && <ReactVirtualizedListExample />}
       {exampleName === 'ReactVirtuosoListExample' && <ReactVirtuosoListExample />}
-
-      {/* Uncomment the following lines to test additional examples */}
-      {/* <ReactWindowFixedSizeListExample /> */}
-      {/* <ReactWindowVariableSizeGridExample /> */}
-      {/* <ReactVirtualizedListExample /> */}
-      {/* <ReactVirtuosoListExample /> */}
-      {/* <FormSimpleWithAxios /> */}
-      {/* <TanStackUseQueryExample /> */}
-      {/* <TanStackUseMutationExample /> */}
-      {/* <GraphQLExample /> */}
-      {/* <FaviconExample /> */}
-      {/* <ReactWindowFixedSizeListExample /> */}
-      {/* <ReactWindowVariableSizeGridExample /> */}
-      {/* <ReactVirtualizedListExample /> */}
-      {/* <ReactVirtuosoListExample /> */}
-      {/* <FormSimpleWithAxios /> */}
-      {/* <TanStackUseQueryExample /> */}
-      {/* <TanStackUseMutationExample /> */}
-      {/* <GraphQLExample /> */}
-      {/* <FaviconExample /> */}
+      {exampleName === 'FormSimpleWithAxios' && <FormSimpleWithAxios />}
+      {exampleName === 'TanStackUseQueryExample' && <TanStackUseQueryExample />}
+      {exampleName === 'TanStackUseMutationExample' && <TanStackUseMutationExample />}
+      {exampleName === 'GraphQLExample' && <GraphQLExample />}
+      {exampleName === 'FaviconExample' && <FaviconExample />}
     </>
   );
 }

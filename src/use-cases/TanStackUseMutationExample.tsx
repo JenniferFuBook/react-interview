@@ -4,6 +4,7 @@
 import {
   QueryClient,
   QueryClientProvider,
+  useIsMutating,
   useMutation,
 } from '@tanstack/react-query';
 
@@ -16,9 +17,11 @@ const UseMutationExample: React.FC = () => {
     mutationFn: async () => {
       const response = await fetch('https://catfact.ninja/fact');
       // await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate a delay
-      const data = await response.json();
-      return data;
+      return await response.json();
     },
+  });
+  const isMutating = useIsMutating({
+    mutationKey: ['catFact'],
   });
 
   const handleMutation = () => {
@@ -35,7 +38,7 @@ const UseMutationExample: React.FC = () => {
         {isPending ? 'Updating...' : data ? data.fact : 'Nothing fetched yet'}
       </div>
       <button onClick={handleMutation} disabled={isPending}>
-        {isPending ? 'Fetching...' : 'Fetch cat fact'}
+        {isMutating ? 'Fetching...' : 'Fetch cat fact'}
       </button>
     </>
   );
