@@ -10,7 +10,8 @@ interface FaviconUpdaterProps {
 const FaviconUpdater: React.FC<FaviconUpdaterProps> = ({ faviconUrl }) => {
   useEffect(() => {
     // Find the existing favicon link element
-    let link: HTMLLinkElement | null = document.querySelector("link[rel*='icon']");
+    let link: HTMLLinkElement | null =
+      document.querySelector("link[rel*='icon']");
 
     // If link does not exist, create a new one
     if (!link) {
@@ -21,10 +22,10 @@ const FaviconUpdater: React.FC<FaviconUpdaterProps> = ({ faviconUrl }) => {
 
     // Update the href attribute with the new favicon URL
     link.href = faviconUrl;
-  }, [faviconUrl]); 
+  }, [faviconUrl]);
 
   return null; // This component does not render anything
-}
+};
 
 const FaviconExample: React.FC = () => {
   const [favicon, setFavicon] = useState<string>('/vite.svg');
@@ -36,18 +37,26 @@ const FaviconExample: React.FC = () => {
     <>
       <FaviconUpdater faviconUrl={favicon} />
       <h1>My App</h1>
-      <button onClick={() => changeFavicon('/vite.svg')}> {/* Click to use Vite favicon */}
+      {/* Click to use Vite favicon */}
+      <button onClick={() => changeFavicon('/vite.svg')}>
         Change to Vite favicon
       </button>
-      <button onClick={() => changeFavicon('/src/assets/react.svg')}> {/* Click to use React favicon */}
+      {/* Click to use React favicon */}
+      <button onClick={() => changeFavicon('/src/assets/react.svg')}>
         Change to React favicon
       </button>
-      <button onClick={() => // Click to use Google doc favicon
-        changeFavicon('https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico')}>
+      <button
+        onClick={() =>
+          // Click to use Google doc favicon
+          changeFavicon(
+            'https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico'
+          )
+        }
+      >
         Change to Google doc favicon
       </button>
     </>
   );
-}
+};
 
 export default FaviconExample;
