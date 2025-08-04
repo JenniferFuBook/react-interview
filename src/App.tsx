@@ -40,6 +40,7 @@ import FaviconExample from './use-cases/FaviconExample';
 import RenderComponentExample from './use-cases/RenderComponentExample';
 import UsePromiseExample from './use-cases/UsePromiseExample';
 import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
+import ViteApiProxyExample from './use-cases/ViteApiProxyExample';
 
 function App() {
   const exampleName = import.meta.env.VITE_NAME || 'BlogPostExample'; 
@@ -86,6 +87,9 @@ function App() {
       {exampleName === 'TanStackUseMutationExample' && <TanStackUseMutationExample />}
       {exampleName === 'GraphQLExample' && <GraphQLExample />}
       {exampleName === 'FaviconExample' && <FaviconExample />}
+
+      {/* Chapter 6 examples */}
+      {exampleName === 'ViteApiProxyExample' && <ViteApiProxyExample />}
 
       {/* Appendix A examples */}
       {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
