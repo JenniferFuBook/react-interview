@@ -41,6 +41,7 @@ import RenderComponentExample from './use-cases/RenderComponentExample';
 import UsePromiseExample from './use-cases/UsePromiseExample';
 import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
 import ViteApiProxyExample from './use-cases/ViteApiProxyExample';
+import LRUDemo from './use-cases/LRUDemo';
 
 function App() {
   const exampleName = import.meta.env.VITE_NAME || 'BlogPostExample'; 
@@ -90,6 +91,7 @@ function App() {
 
       {/* Chapter 6 examples */}
       {exampleName === 'ViteApiProxyExample' && <ViteApiProxyExample />}
+      {exampleName === 'LRUDemo' && <LRUDemo />}
 
       {/* Appendix A examples */}
       {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
