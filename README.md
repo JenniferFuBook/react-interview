@@ -58,6 +58,7 @@ The repository is set up as a [Vite](https://vite.dev) TypeScript project. Vite 
 react-interview/                   # Root of the project
   ├── public/                      # Static assets (images, fonts, etc.)
   ├── src/                         # Application source code
+  |     ├── algorithms/            # Common algorithm implementations
   │     ├── assets/                # Shared images and assets
   │     ├── components/            # Reusable React components
   │     ├── hooks/                 # Custom React hooks
