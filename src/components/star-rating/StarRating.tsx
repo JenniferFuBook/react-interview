@@ -40,7 +40,10 @@ const StarRating: React.FC<StarRatingProps> = ({
   const activeUntil = Math.max(rating, hoverIndex);
 
   // Event handler for clicking a star
-  const handleClick = (index: number) => setRating(index);
+  const handleClick = (index: number) => {
+    setRating(index === rating ? index - 1 : index); // Toggle rating if same star is clicked
+    setHoverIndex(-1); // Reset hover state on click
+  }
 
   // Event handler for hovering over a star
   const handleHover = (index: number) => setHoverIndex(index);
