@@ -42,6 +42,7 @@ import UsePromiseExample from './use-cases/UsePromiseExample';
 import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
 import ViteApiProxyExample from './use-cases/ViteApiProxyExample';
 import LRUDemo from './use-cases/LRUDemo';
+import StarRatingExample from './use-cases/StarRatingExample';
 
 function App() {
   const exampleName = import.meta.env.VITE_NAME || 'BlogPostExample'; 
@@ -92,6 +93,9 @@ function App() {
       {/* Chapter 6 examples */}
       {exampleName === 'ViteApiProxyExample' && <ViteApiProxyExample />}
       {exampleName === 'LRUDemo' && <LRUDemo />}
+
+      {/* Chapter 8 examples */}
+      {exampleName === 'StarRatingExample' && <StarRatingExample />}
 
       {/* Appendix A examples */}
       {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
