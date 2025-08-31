@@ -5,7 +5,7 @@ const StarRatingExample: React.FC = () => {
     <div style={{ padding: 20 }}>
       <StarRating defaultRating={1} activeColor="black" />
       <StarRating
-        defaultRating={3}
+        defaultRating={0.5}
         numOfStars={5}
         activeColor="blue"
         inactiveColor="darkgray"

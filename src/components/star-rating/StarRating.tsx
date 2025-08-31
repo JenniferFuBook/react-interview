@@ -3,6 +3,16 @@ import { StarRatingList } from './StarRatingList';
 import { StarRatingLabel } from './StarRatingLabel';
 import './index.css';
 
+const getNewRating = (index: number, currentRating: number, e: React.MouseEvent<HTMLSpanElement>) => {
+    const { left, width } = (e.target as HTMLElement).getBoundingClientRect();
+    const clickX = e.clientX - left;
+    const isHalf = clickX < width / 2;
+    const newRating = isHalf ? index - 0.5 : index; //
+
+    // Toggle if clicking the same rating again
+    return currentRating === newRating ? newRating - 0.5 : newRating;
+}
+
 type StarRatingProps = {
   // Initial rating (0-based; -1 means "not rated")
   defaultRating?: number;
@@ -40,19 +50,25 @@ const StarRating: React.FC<StarRatingProps> = ({
   const activeUntil = Math.max(rating, hoverIndex);
 
   // Event handler for clicking a star
-  const handleClick = (index: number) => {
-    setRating(index === rating ? index - 1 : index); // Toggle rating if same star is clicked
+  // Toggle rating with half-star precision
+  const handleClick = (index: number, e: React.MouseEvent<HTMLSpanElement>) => {
+    setRating(getNewRating(index, rating, e));
     setHoverIndex(-1); // Reset hover state on click
-  }
+  };
 
   // Event handler for hovering over a star
-  const handleHover = (index: number) => setHoverIndex(index);
+  const handleHover = (index: number, e: React.MouseEvent<HTMLSpanElement>) => {
+    const newHoverIndex = getNewRating(index, hoverIndex, e);
+    if (newHoverIndex !== hoverIndex) {
+    setHoverIndex(getNewRating(index, rating, e));
+    }
+  }
 
   // Reset hover state on leave
   const handleLeave = () => setHoverIndex(-1);
 
   // Determine label text (either default text or "Rated X")
-  const label = rating === -1 ? text : `Rated ${rating + 1}`;
+  const label = rating === -1 ? text : `Rated ${rating}`;
 
   return (
     <div
