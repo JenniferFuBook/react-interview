@@ -52,7 +52,7 @@ const StarRating: React.FC<StarRatingProps> = ({
 
   // Event handler for hovering over a star
   const handleHover = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Use a utility function to obtain the index of the hover star
+    // Use a utility function to obtain the index of the hovered star
     const index = calculateNewRating(e);
     // Optimize performance by triggering updates solely on changes
     if (index !== undefined && index !== hoverIndex) {
