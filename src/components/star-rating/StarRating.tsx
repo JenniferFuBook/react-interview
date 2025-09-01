@@ -22,7 +22,7 @@ type StarRatingProps = {
 };
 
 // Main container component (logic layer)
-const StarRating = ({
+const StarRating: React.FC<StarRatingProps> = ({
   defaultRating = -1,
   numOfStars = 5,
   activeColor = 'orange',
@@ -30,7 +30,7 @@ const StarRating = ({
   starSize = '40px',
   text = 'Not rated',
   showLabel = true,
-}: StarRatingProps) => {
+}) => {
   // Track the current rating (persistent after click)
   const [rating, setRating] = useState<number>(defaultRating);
 
@@ -45,17 +45,15 @@ const StarRating = ({
     // Use a utility function to obtain the index of the clicked star
     const index = calculateNewRating(e);
     if (index !== undefined) {
-      // Determine new rating (toggle if same star clicked)
-      const newRating = index === rating ? index - 0.5 : index;
-      setRating(newRating);
-      setHoverIndex(-1); // Reset hover state on click
+      setRating(index);
     }
   };
 
   // Event handler for hovering over a star
   const handleHover = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Use a utility function to obtain the index of the hover star
+    // Use a utility function to obtain the index of the clicked star
     const index = calculateNewRating(e);
+    // Optimize performance by triggering updates solely on changes
     if (index !== undefined && index !== hoverIndex) {
       setHoverIndex(index);
     }
@@ -64,38 +62,11 @@ const StarRating = ({
   // Reset hover state on leave
   const handleLeave = () => setHoverIndex(-1);
 
-  // Keyboard event handler for accessibility
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    // Get all star elements
-    const stars =
-      e.currentTarget.parentElement?.querySelectorAll('[role="radio"]'); 
-    if (!stars) {
-      return;
-    }
-
-    // Handle left and right arrow keys to adjust rating
-    if (e.key === 'ArrowRight') { // Increase rating by half star
-      const newRating = rating + 0.5 <= numOfStars ? rating + 0.5 : 0;
-      setRating(newRating);
-      (stars[Math.ceil(newRating) - 1] as HTMLElement).focus();
-    } else if (e.key === 'ArrowLeft') { // Decrease rating by half star
-      const newRating = rating - 0.5 >= 0 ? rating - 0.5 : numOfStars;
-      setRating(newRating);
-      (stars[Math.ceil(newRating) - 1] as HTMLElement).focus();
-    }
-  };
-
   // Determine label text (either default text or "Rated X")
   const label = rating > 0 ? `Rated ${rating}` : text;
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
-    >
+    <div className="container">
       {/* Star list (UI layer) */}
       <StarRatingList
         numOfStars={numOfStars}
@@ -103,11 +74,9 @@ const StarRating = ({
         activeColor={activeColor}
         inactiveColor={inactiveColor}
         starSize={starSize}
-        hoverIndex={hoverIndex}
         onHover={handleHover}
         onLeave={handleLeave}
         onClick={handleClick}
-        onKeyDown={handleKeyDown}
       />
       {/* Optional label (UI layer) */}
       {showLabel && <StarRatingLabel text={label} />}
