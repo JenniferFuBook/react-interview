@@ -14,7 +14,7 @@ export const Star: React.FC<StarProps> = ({
   starSize,
 }) => {
   return (
-    <span
+    <span // Container for stars
       data-star-index={index} // Assign a data attribute for star identification
       style={{
         position: 'relative',
