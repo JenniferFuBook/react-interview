@@ -5,7 +5,7 @@ import { calculateNewRating } from './utils';
 import './index.css';
 
 type StarRatingProps = {
-  // Initial rating (0-based; -1 means "not rated")
+  // Initial rating (1-based; -1 means "not rated")
   defaultRating?: number;
   // Number of stars to render (defaults to 5)
   numOfStars?: number;
@@ -42,6 +42,7 @@ const StarRating: React.FC<StarRatingProps> = ({
 
   // Event handler for clicking a star
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Use a utility function to obtain the index of the clicked star
     const index = calculateNewRating(e);
     if (index !== undefined) {
       // Determine new rating (toggle if same star clicked)
@@ -53,6 +54,7 @@ const StarRating: React.FC<StarRatingProps> = ({
 
   // Event handler for hovering over a star
   const handleHover = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Use a utility function to obtain the index of the hover star
     const index = calculateNewRating(e);
     if (index !== undefined && index !== hoverIndex) {
       setHoverIndex(index);
