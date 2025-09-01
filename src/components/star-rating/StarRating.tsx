@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { StarRatingList } from './StarRatingList';
 import { StarRatingLabel } from './StarRatingLabel';
+import { calculateNewRating } from './utils';
 import './index.css';
 
 type StarRatingProps = {
-  // Initial rating (0-based; -1 means "not rated")
+  // Initial rating (1-based; -1 means "not rated")
   defaultRating?: number;
   // Number of stars to render (defaults to 5)
   numOfStars?: number;
@@ -40,28 +41,33 @@ const StarRating: React.FC<StarRatingProps> = ({
   const activeUntil = Math.max(rating, hoverIndex);
 
   // Event handler for clicking a star
-  const handleClick = (index: number) => {
-    setRating(index === rating ? index - 1 : index); // Toggle rating if same star is clicked
-    setHoverIndex(-1); // Reset hover state on click
-  }
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Use a utility function to obtain the index of the clicked star
+    const index = calculateNewRating(e);
+    if (index !== undefined) {
+      setRating(index === rating ? index - 1 : index); // Toggle the rating if the same star is clicked again
+      setHoverIndex(-1); // Reset hover state after the click
+    }
+  };
 
   // Event handler for hovering over a star
-  const handleHover = (index: number) => setHoverIndex(index);
+  const handleHover = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Use a utility function to obtain the index of the clicked star
+    const index = calculateNewRating(e);
+    // Optimize performance by triggering updates solely on changes
+    if (index !== undefined && index !== hoverIndex) {
+      setHoverIndex(index);
+    }
+  };
 
   // Reset hover state on leave
   const handleLeave = () => setHoverIndex(-1);
 
   // Determine label text (either default text or "Rated X")
-  const label = rating === -1 ? text : `Rated ${rating + 1}`;
+  const label = rating > 0 ? `Rated ${rating}` : text;
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
-    >
+    <div className="container">
       {/* Star list (UI layer) */}
       <StarRatingList
         numOfStars={numOfStars}

@@ -4,9 +4,6 @@ type StarProps = {
   activeColor: string;
   inactiveColor: string;
   starSize: string;
-  onHover: (index: number) => void;
-  onLeave: () => void;
-  onClick: (index: number) => void;
 };
 
 export const Star: React.FC<StarProps> = ({
@@ -15,20 +12,15 @@ export const Star: React.FC<StarProps> = ({
   activeColor,
   inactiveColor,
   starSize,
-  onHover,
-  onLeave,
-  onClick,
 }) => {
   return (
     <span
+      data-star-index={index} // Assign a data attribute for star identification
       style={{
-        color: fill ? activeColor : inactiveColor, // Conditional coloring
+        color: fill ? activeColor : inactiveColor, // Conditional coloring (active vs inactive)
         fontSize: starSize, // Control size of the star
         cursor: 'pointer', // Indicate interactivity
       }}
-      onMouseEnter={() => onHover(index)} // Trigger hover event
-      onMouseLeave={onLeave} // Reset on leave
-      onClick={() => onClick(index)} // Update rating on click
     >
       ★ {/* Unicode star character */}
     </span>
