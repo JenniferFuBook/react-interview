@@ -7,9 +7,9 @@ type StarRatingListProps = {
   activeColor: string;
   inactiveColor: string;
   starSize: string;
-  onHover: (index: number) => void;
+  onHover: (e: React.MouseEvent<HTMLDivElement>) => void;
   onLeave: () => void;
-  onClick: (index: number) => void;
+  onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
 
 export const StarRatingList: React.FC<StarRatingListProps> = ({
@@ -23,21 +23,26 @@ export const StarRatingList: React.FC<StarRatingListProps> = ({
   onClick,
 }) => {
   return (
-    <div className="star-list-container">
+    <div
+      className="star-list-container"
+      onMouseMove={onHover}
+      onMouseLeave={onLeave}
+      onClick={onClick}
+    >
       {/* Generate an array of stars based on numOfStars */}
-      {Array.from({ length: numOfStars }).map((_, i) => (
-        <Star
-          key={i}
-          index={i} // Star position in the list
-          fill={i <= activeUntil ? 1 : 0} // 1 = full, 0 = empty
-          activeColor={activeColor}
-          inactiveColor={inactiveColor}
-          starSize={starSize}
-          onHover={onHover}
-          onLeave={onLeave}
-          onClick={onClick}
-        />
-      ))}
+      {Array.from({ length: numOfStars }).map((_, i) => {
+        const startIndex = i + 1; // Create 1-based index for stars
+        return (
+          <Star
+            key={i}
+            index={startIndex} // Star position in the list
+            fill={startIndex <= activeUntil ? 1 : 0} // 1 = full, 0 = empty
+            activeColor={activeColor}
+            inactiveColor={inactiveColor}
+            starSize={starSize}
+          />
+        );
+      })}
     </div>
   );
 };
