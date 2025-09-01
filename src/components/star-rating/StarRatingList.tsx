@@ -22,7 +22,6 @@ export const StarRatingList: React.FC<StarRatingListProps> = ({
   onLeave,
   onClick,
 }) => {
-
   return (
     <div
       className="star-list-container"
