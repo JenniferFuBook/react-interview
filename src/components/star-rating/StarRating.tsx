@@ -82,6 +82,7 @@ const StarRating: React.FC<StarRatingProps> = ({
         activeColor={activeColor}
         inactiveColor={inactiveColor}
         starSize={starSize}
+        hoverIndex={hoverIndex}
         onHover={handleHover}
         onLeave={handleLeave}
         onClick={handleClick}
