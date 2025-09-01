@@ -6,13 +6,13 @@ type StarProps = {
   starSize: string;
 };
 
-export const Star = ({
+export const Star: React.FC<StarProps> = ({
   index,
   fill,
   activeColor,
   inactiveColor,
   starSize,
-}: StarProps) => {
+}) => {
   return (
     <span
       data-star-index={index} // Assign a data attribute for star identification

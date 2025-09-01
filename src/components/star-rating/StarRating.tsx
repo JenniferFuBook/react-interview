@@ -22,7 +22,7 @@ type StarRatingProps = {
 };
 
 // Main container component (logic layer)
-const StarRating = ({
+const StarRating: React.FC<StarRatingProps> = ({
   defaultRating = -1,
   numOfStars = 5,
   activeColor = 'orange',
@@ -30,7 +30,7 @@ const StarRating = ({
   starSize = '40px',
   text = 'Not rated',
   showLabel = true,
-}: StarRatingProps) => {
+}) => {
   // Track the current rating (persistent after click)
   const [rating, setRating] = useState<number>(defaultRating);
 
@@ -45,13 +45,14 @@ const StarRating = ({
     // Use a utility function to obtain the index of the clicked star
     const index = calculateNewRating(e);
     if (index !== undefined) {
-      setRating(index);
+      setRating(index === rating ? index - 1 : index); // Toggle the rating if the same star is clicked again
+      setHoverIndex(-1); // Reset hover state after the click
     }
   };
 
   // Event handler for hovering over a star
   const handleHover = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Use a utility function to obtain the index of the hovered star
+    // Use a utility function to obtain the index of the clicked star
     const index = calculateNewRating(e);
     // Optimize performance by triggering updates solely on changes
     if (index !== undefined && index !== hoverIndex) {
