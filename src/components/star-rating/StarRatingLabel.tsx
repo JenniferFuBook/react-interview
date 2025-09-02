@@ -3,5 +3,9 @@ type StarRatingLabelProps = {
 };
 
 export const StarRatingLabel: React.FC<StarRatingLabelProps> = ({ text }) => {
-  return <div>{text}</div>;
+  return (
+    <div role="status" tabIndex={0}>
+      {text}
+    </div>
+  );
 };

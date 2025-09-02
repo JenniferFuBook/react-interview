@@ -64,6 +64,27 @@ const StarRating: React.FC<StarRatingProps> = ({
   // Reset hover state on leave
   const handleLeave = () => setHoverIndex(-1);
 
+  // Keyboard event handler for accessibility
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    // Get all star elements
+    const stars =
+      e.currentTarget.parentElement?.querySelectorAll('[role="radio"]'); 
+    if (!stars) {
+      return;
+    }
+
+    // Handle left and right arrow keys to adjust rating
+    if (e.key === 'ArrowRight') { // Increase rating by half star
+      const newRating = rating + 0.5 <= numOfStars ? rating + 0.5 : 0;
+      setRating(newRating);
+      (stars[Math.ceil(newRating) - 1] as HTMLElement).focus();
+    } else if (e.key === 'ArrowLeft') { // Decrease rating by half star
+      const newRating = rating - 0.5 >= 0 ? rating - 0.5 : numOfStars;
+      setRating(newRating);
+      (stars[Math.ceil(newRating) - 1] as HTMLElement).focus();
+    }
+  };
+
   // Determine label text (either default text or "Rated X")
   const label = rating > 0 ? `Rated ${rating}` : text;
 
@@ -86,6 +107,7 @@ const StarRating: React.FC<StarRatingProps> = ({
         onHover={handleHover}
         onLeave={handleLeave}
         onClick={handleClick}
+        onKeyDown={handleKeyDown}
       />
       {/* Optional label (UI layer) */}
       {showLabel && <StarRatingLabel text={label} />}

@@ -32,6 +32,10 @@ export const Star: React.FC<StarProps> = ({
         lineHeight: 1,
         cursor: 'pointer', // Indicate interactivity
       }}
+      role="radio" // Treat star as a radio button
+      aria-label={`Rate ${index}${fill === 0.5 ? ' and a half' : ''} stars`} // Screen reader description
+      aria-checked={fill > 0} // Whether this star is selected
+      tabIndex={0} // Make star focusable for keyboard navigation
     >
       {/* Base (inactive) star */}
       <span
@@ -43,6 +47,7 @@ export const Star: React.FC<StarProps> = ({
           width: '100%',
           height: '100%',
         }}
+        aria-hidden="true" // Hide decorative star from screen readers
       >
         ★ {/* Unicode star character */}
       </span>
@@ -60,6 +65,7 @@ export const Star: React.FC<StarProps> = ({
           // Smoothly interpolate width changes when a star fills or empties
           transition: 'width 0.2s ease-in-out', 
         }}
+        aria-hidden="true" // Hide decorative star from screen readers
       >
         ★ {/* Unicode star character */}
       </span>

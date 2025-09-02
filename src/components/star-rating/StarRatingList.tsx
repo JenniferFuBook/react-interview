@@ -11,6 +11,7 @@ type StarRatingListProps = {
   onHover: (e: React.MouseEvent<HTMLDivElement>) => void;
   onLeave: () => void;
   onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
+  onKeyDown: (e: React.KeyboardEvent<HTMLDivElement>) => void;
 };
 
 export const StarRatingList: React.FC<StarRatingListProps> = ({
@@ -23,13 +24,16 @@ export const StarRatingList: React.FC<StarRatingListProps> = ({
   onHover,
   onLeave,
   onClick,
+  onKeyDown,
 }) => {
   return (
     <div
       className="star-list-container"
+      role="radiogroup" // Treat the star list as a group of radio buttons
       onMouseMove={onHover} // Use onMouseMove to track hover over stars
       onMouseLeave={onLeave}
       onClick={onClick}
+      onKeyDown={onKeyDown}
     >
       {/* Generate an array of stars based on numOfStars */}
       {Array.from({ length: numOfStars }).map((_, i) => {
