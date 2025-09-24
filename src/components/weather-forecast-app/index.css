@@ -1,0 +1,106 @@
+/* Hide the default Leaflet popup tip triangle */
+.leaflet-popup-tip {
+  display: none;
+}
+
+/* Push Leaflet top controls down to avoid overlapping the search bar */
+.leaflet-top {
+  margin-top: 50px;
+}
+
+/* Customize popup width: auto-fit content, set minimum width, remove default max-width */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-content {
+  width: auto !important;
+  min-width: 500px;
+  max-width: none;
+}
+
+/* Style the popup close button to be larger and more readable */
+.leaflet-container a.leaflet-popup-close-button {
+  width: 30px; /* Increase width */
+  height: 30px; /* Increase height */
+  line-height: 30px; /* Center the × symbol vertically */
+  font-size: 30px; /* Make the × symbol bigger */
+}
+
+/* Full-screen map container, leaving space for margins */
+.map-container {
+  height: calc(100vh - 40px);
+  width: 100%;
+}
+
+/* Input field inside the map */
+.map-container input {
+  padding: 6px;
+  width: 200px;
+}
+
+/* Button inside the map */
+.map-container button {
+  padding: 6px;
+}
+
+/* Search bar positioned absolutely over the map */
+.location-search {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  z-index: 1000; /* Ensure it appears above map layers */
+}
+
+/* Container for weather forecast display */
+.weather-forecast-display {
+  margin: 1rem auto;
+  font-family: sans-serif;
+}
+
+/* Weather forecast table styling */
+.weather-forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Table cell and header common styling */
+.weather-forecast-table th,
+.weather-forecast-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Table headers */
+.weather-forecast-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Row header for table attributes */
+.weather-forecast-table .row-header {
+  text-align: left;
+}
+
+/* Row containing weather icons and short forecast text */
+.weather-forecast-table .icon-row {
+  vertical-align: top;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Row for displaying temperature with larger font */
+.weather-forecast-table .darker-row {
+  font-size: 1.2rem;
+}
+
+/* Wind direction arrows row */
+.weather-forecast-table .wind-direction {
+  color: #666;
+}
+
+/* Row for lighter content like wind speed */
+.weather-forecast-table .lighter-row {
+  font-size: 0.9rem;
+  color: #888;
+}
