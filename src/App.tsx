@@ -44,6 +44,7 @@ import ViteApiProxyExample from './use-cases/ViteApiProxyExample';
 import LRUDemo from './use-cases/LRUDemo';
 import StarRatingExample from './use-cases/StarRatingExample';
 import WeatherForecastApp from './use-cases/WeatherForecastApp';
+import AccessibleModalExample from './use-cases/AccessibleModalExample';
 
 function App() {
   const exampleName = import.meta.env.VITE_NAME || 'BlogPostExample'; 
@@ -98,6 +99,9 @@ function App() {
       {/* Chapter 8 examples */}
       {exampleName === 'StarRatingExample' && <StarRatingExample />}
       {exampleName === 'WeatherForecastApp' && <WeatherForecastApp />}
+
+      {/* Chapter 10 examples */}
+      {exampleName === 'AccessibleModalExample' && <AccessibleModalExample />}
 
       {/* Appendix A examples */}
       {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
