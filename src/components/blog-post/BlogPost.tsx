@@ -17,7 +17,7 @@ const BlogPost: React.FC<BlogPostProps> = ({post}) => {
       <main>
         <article>
           <header>
-            <h1>{post.title}</h1>
+            <h1 className="heading">{post.title}</h1>
             <h2>{post.subtitle}</h2>
           </header>
           {post.sections.map((section, index) => (
