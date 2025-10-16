@@ -24,10 +24,10 @@ const BlogPost: React.FC<BlogPostProps> = ({post}) => {
             <section key={index}>
               <h3>{section.title}</h3>
               {section.subsections.map((subsection, subIndex) => (
-                <div key={subIndex}>
+                <section key={subIndex}>
                   <h4>{subsection.title}</h4>
                   <p>{subsection.content}</p>
-                </div>
+                </section>
               ))}
             </section>
           ))}
