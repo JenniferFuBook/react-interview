@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ConfigProvider, theme } from 'antd';
 import AppLayout from '../components/antd-theme/AppLayout';
 
-const AutoAntDThemeExample: React.FC = () => {
+const AutoAntDThemeExample = () => {
   // Initialize theme state from saved user preference or system preference
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     const savedTheme = localStorage.getItem('antd-theme');

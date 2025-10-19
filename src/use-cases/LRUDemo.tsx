@@ -3,7 +3,7 @@ import LRUCache from '../algorithms/lru/LRUCache';
 
 const cache = new LRUCache<number, string>(3);
 
-export const LRUDemo: React.FC = () => {
+export const LRUDemo = () => {
   const [key, setKey] = useState<number>(0);
   const [value, setValue] = useState<string>('');
   const [result, setResult] = useState<string | number | null>(null);

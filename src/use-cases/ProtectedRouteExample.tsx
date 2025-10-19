@@ -4,7 +4,7 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router';
 import ProtectedRoute from '../components/router/ProtectedRoute';
 
-const ProtectedRouteExample: React.FC = () => {
+const ProtectedRouteExample = () => {
   return (
     // BrowserRouter wraps the entire app to enable routing functionality
     <BrowserRouter>
@@ -41,10 +41,10 @@ const ProtectedRouteExample: React.FC = () => {
   );
 };
 
-const Home: React.FC = () => <h1>Home Page</h1>;
-const Login: React.FC = () => <h1>Login Page</h1>;
-const About: React.FC = () => <h1>About Page</h1>;
-const Contact: React.FC = () => <h1>Contact Page</h1>;
-const NotFound: React.FC = () => <h1>404: Page Not Found</h1>;
+const Home = () => <h1>Home Page</h1>;
+const Login = () => <h1>Login Page</h1>;
+const About = () => <h1>About Page</h1>;
+const Contact = () => <h1>Contact Page</h1>;
+const NotFound = () => <h1>404: Page Not Found</h1>;
 
 export default ProtectedRouteExample;

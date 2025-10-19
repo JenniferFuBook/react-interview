@@ -4,7 +4,7 @@ interface SearchComponentProps {
   items: string[];
 }
 
-const SearchComponent: React.FC<SearchComponentProps> = ({ items }) => {
+const SearchComponent = ({ items }: SearchComponentProps) => {
   const [query, setQuery] = useState<string>(''); // Track the search query
   const [results, setResults] = useState<string[]>(items); // Track filtered results
   const [isPending, startTransition] = useTransition(); // Hook for managing transitions

@@ -7,7 +7,7 @@ interface Fruit {
   price: number;
 }
 
-const TooltipExample: React.FC = () => {
+const TooltipExample = () => {
   const [fruits] = useState<Fruit[]>([
     { id: 1, name: 'Apple', price: 2.5 },
     { id: 2, name: 'Banana', price: 1.99 },

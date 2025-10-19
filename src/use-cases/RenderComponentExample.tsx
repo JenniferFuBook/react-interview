@@ -33,7 +33,7 @@ const onRenderCallback: ProfilerOnRenderCallback = (
 };
 
 // Define the ChildComponent
-const ChildComponent: React.FC = () => {
+const ChildComponent = () => {
   const theme = use(ThemeContext); // Consume context value
   return (
     <Profiler id="ChildComponent" onRender={onRenderCallback}>
@@ -47,7 +47,7 @@ interface ParentComponentProps {
 }
 
 // Define the ParentComponent
-const ParentComponent: React.FC<ParentComponentProps> = ({ count }) => {
+const ParentComponent = ({ count }: ParentComponentProps) => {
   // Receive count as a prop
   return (
     <>
@@ -61,7 +61,7 @@ const ParentComponent: React.FC<ParentComponentProps> = ({ count }) => {
 };
 
 // Define the main app component
-const RenderComponentExample: React.FC = () => {
+const RenderComponentExample = () => {
   const [count, setCount] = useState<number>(0); // Track the count state
   const [theme, setTheme] = useState<string>('black'); // Tract the theme state
 

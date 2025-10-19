@@ -7,7 +7,7 @@ interface FaviconUpdaterProps {
   faviconUrl: string;
 }
 
-const FaviconUpdater: React.FC<FaviconUpdaterProps> = ({ faviconUrl }) => {
+const FaviconUpdater = ({ faviconUrl }: FaviconUpdaterProps) => {
   useEffect(() => {
     // Find the existing favicon link element
     let link: HTMLLinkElement | null =
@@ -27,7 +27,7 @@ const FaviconUpdater: React.FC<FaviconUpdaterProps> = ({ faviconUrl }) => {
   return null; // This component does not render anything
 };
 
-const FaviconExample: React.FC = () => {
+const FaviconExample = () => {
   const [favicon, setFavicon] = useState<string>('/vite.svg');
   const changeFavicon = (newFavicon: string) => {
     setFavicon(newFavicon);

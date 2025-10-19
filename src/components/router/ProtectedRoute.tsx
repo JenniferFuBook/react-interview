@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from 'react-router';
 
-const ProtectedRoute: React.FC = () => {
+const ProtectedRoute = () => {
   const isValidUser = false; // Simulate user authentication
 
   if (!isValidUser) { // Redirect to the login page if the user is not authenticated

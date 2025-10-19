@@ -1,9 +1,9 @@
 import { useActionState } from 'react';
 import { FormState, FormData } from './types';
-import './index.css';
 import axios from 'axios';
+import './index.css';
 
-const Form: React.FC = () => {
+const Form = () => {
   const [state, formAction, isPending] = useActionState<FormState, FormData>(
     async (_prevState, formData: FormData) => {
       try {

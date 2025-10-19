@@ -7,12 +7,12 @@ type IconButtonProps = {
   handleClick: MouseEventHandler<HTMLButtonElement>;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const IconButton: React.FC<IconButtonProps> = ({
+const IconButton = ({
   icon,
   altText,
   handleClick,
   ...props
-}) => {
+}: IconButtonProps) => {
   return (
     <Styled.Button {...props} onClick={handleClick}> {/* Use the styled button component */}
       <Styled.Img src={icon} alt={altText || 'icon button'} /> {/* Use the styled img component */}

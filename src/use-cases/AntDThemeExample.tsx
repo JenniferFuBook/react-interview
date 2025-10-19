@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ConfigProvider, theme } from 'antd';
 import AppLayout from '../components/antd-theme/AppLayout';
 
-const AntDThemeExample: React.FC = () => {
+const AntDThemeExample = () => {
   // Track the current theme state
   const [isDarkMode, setIsDarkMode] = useState(false);
 

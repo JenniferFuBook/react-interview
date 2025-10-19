@@ -6,10 +6,7 @@ type AccessibleModalProps = {
   onClose: () => void;
 };
 
-const AccessibleModal: React.FC<AccessibleModalProps> = ({
-  isOpen,
-  onClose,
-}) => {
+const AccessibleModal = ({ isOpen, onClose }: AccessibleModalProps) => {
   const dialogRef = useRef<HTMLDialogElement | null>(null); // Reference the <dialog> element
 
   useEffect(() => {

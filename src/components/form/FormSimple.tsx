@@ -1,7 +1,7 @@
 import { useActionState } from 'react';
 import { FormState, FormData } from './types';
 
-const Form: React.FC = () => {
+const Form = () => {
   // Define the form state and action using useActionState hook
   const [state, formAction, isPending] = useActionState<FormState, FormData>(
     // Async function to handle form submission

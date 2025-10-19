@@ -3,7 +3,7 @@
 
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
 
-const Row: React.FC<ListChildComponentProps> = ({ index, style }) => (
+const Row = ({ index, style }: ListChildComponentProps) => (
   <div
     style={{
       ...style,
@@ -15,7 +15,7 @@ const Row: React.FC<ListChildComponentProps> = ({ index, style }) => (
   </div>
 );
 
-const ReactWindowFixedSizeListExample: React.FC = () => {
+const ReactWindowFixedSizeListExample = () => {
   return (
     <FixedSizeList
       height={350} // height of the list

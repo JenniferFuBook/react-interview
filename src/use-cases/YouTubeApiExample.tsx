@@ -7,7 +7,7 @@ declare global {
   }
 }
 
-const YouTubeApiExample: React.FC = () => {
+const YouTubeApiExample = () => {
   // Create a reference to the DOM element where the YouTube player will be inserted
   const playerRef = useRef<HTMLDivElement>(null);
 

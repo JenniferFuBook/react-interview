@@ -5,7 +5,7 @@ type BlogPostProps = {
   post: PostProps;
 };
 
-const BlogPost: React.FC<BlogPostProps> = ({post}) => {
+const BlogPost = ({post}: BlogPostProps) => {
   return (
     <>
       <title>{post.title}</title>

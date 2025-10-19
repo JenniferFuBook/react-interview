@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import useDebounce from '../hooks/use-debounce/useDebounce';
 
-const DebounceExample: React.FC = () => {
+const DebounceExample = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const debouncedSearchTerm = useDebounce<string>({
     value: searchTerm,

@@ -10,7 +10,7 @@ import {
 
 const queryClient = new QueryClient(); // Create a client
 
-const UseMutationExample: React.FC = () => {
+const UseMutationExample = () => {
   const { mutate, isPending, data, error } = useMutation({
     // Fetch data
     mutationKey: ['catFact'],
@@ -44,7 +44,7 @@ const UseMutationExample: React.FC = () => {
   );
 };
 
-const TanStackUseMutationExample: React.FC = () => {
+const TanStackUseMutationExample = () => {
   return (
     // Must wrap the app with QueryClientProvider to provide the client to the app
     <QueryClientProvider client={queryClient}>

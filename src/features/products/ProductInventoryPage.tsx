@@ -5,6 +5,6 @@
  * and separation of concerns in a larger application. It can be used in conjunction with
  * other feature modules like checkout and user profile, as shown in the ModularRouteApp example.
  */
-export const ProductInventoryPage: React.FC = () => (
+export const ProductInventoryPage = () => (
   <h1>Product Inventory Page</h1>
 );

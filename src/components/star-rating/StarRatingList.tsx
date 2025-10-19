@@ -14,7 +14,7 @@ type StarRatingListProps = {
   onKeyDown: (e: React.KeyboardEvent<HTMLDivElement>) => void;
 };
 
-export const StarRatingList: React.FC<StarRatingListProps> = ({
+export const StarRatingList = ({
   numOfStars,
   activeUntil,
   activeColor,
@@ -25,7 +25,7 @@ export const StarRatingList: React.FC<StarRatingListProps> = ({
   onLeave,
   onClick,
   onKeyDown,
-}) => {
+}: StarRatingListProps) => {
   return (
     <div
       className="star-list-container"

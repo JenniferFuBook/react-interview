@@ -8,7 +8,7 @@ const ProductInventoryApp = lazy(
   () => import('../features/products/ProductInventoryApp')
 );
 
-const ModularRouteApp: React.FC = () => {
+const ModularRouteApp = () => {
   return (
     <BrowserRouter>
       {/* Use Suspense to handle loading states for lazy-loaded components */}

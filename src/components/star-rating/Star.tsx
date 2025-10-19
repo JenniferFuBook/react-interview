@@ -7,19 +7,19 @@ type StarProps = {
   hoverIndex: number;
 };
 
-export const Star: React.FC<StarProps> = ({
+export const Star = ({
   index,
   fill,
   activeColor,
   inactiveColor,
   starSize,
   hoverIndex,
-}) => {
+}: StarProps) => {
   return (
     <span // Container for stars
       // Dynamically apply the bounce animation to whichever star is hovered
       className={
-        hoverIndex === index || hoverIndex === index - 0.5 ? 'bounce' : '' 
+        hoverIndex === index || hoverIndex === index - 0.5 ? 'bounce' : ''
       }
       data-star-index={index} // Assign a data attribute for star identification
       style={{
@@ -63,7 +63,7 @@ export const Star: React.FC<StarProps> = ({
           height: '100%',
           overflow: 'hidden',
           // Smoothly interpolate width changes when a star fills or empties
-          transition: 'width 0.2s ease-in-out', 
+          transition: 'width 0.2s ease-in-out',
         }}
         aria-hidden="true" // Hide decorative star from screen readers
       >

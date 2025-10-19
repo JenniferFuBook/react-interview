@@ -5,7 +5,7 @@ interface DogImage {
   status: string;
 }
 
-const ViteApiProxyExample: React.FC = () => {
+const ViteApiProxyExample = () => {
   const [loading, setLoading] = useState(true);
   const [dog, setDog] = useState<DogImage | null>(null);
 

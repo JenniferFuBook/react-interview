@@ -7,7 +7,7 @@ interface ItemListProps {
   initialItems: string[];
 }
 
-const RemoveItemList: React.FC<ItemListProps> = ({ initialItems = [] }) => {
+const RemoveItemList = ({ initialItems = [] }: ItemListProps) => {
   const [items, setItems] = useState(initialItems);
   const removeItem = () => {
     setItems((prevItems) => prevItems.slice(0, -1));
@@ -27,7 +27,7 @@ const RemoveItemList: React.FC<ItemListProps> = ({ initialItems = [] }) => {
   );
 };
 
-const DeclarativeUiExample: React.FC = () => (
+const DeclarativeUiExample = () => (
   <RemoveItemList initialItems={['Item 1', 'Item 2', 'Item 3']} />
 );
 

@@ -23,7 +23,7 @@ const getWeekNames = () =>
 // Create the initial Promise outside the component
 const weekNamesPromise = getWeekNames();
 
-const WeekView: React.FC = () => {
+const WeekView = () => {
   // Use the created Promise to avoid creating a new Promise during every render
   const [getWeekNamesPromise, setGetWeekNamesPromise] =
     useState(weekNamesPromise); 
@@ -39,7 +39,7 @@ const WeekView: React.FC = () => {
   );
 };
 
-const UsePromiseExample: React.FC = () => {
+const UsePromiseExample = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <WeekView />

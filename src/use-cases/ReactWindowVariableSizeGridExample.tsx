@@ -3,11 +3,11 @@
 
 import { VariableSizeGrid, GridChildComponentProps } from 'react-window';
 
-const GridItem: React.FC<GridChildComponentProps> = ({
+const GridItem = ({
   columnIndex,
   rowIndex,
   style,
-}) => {
+}: GridChildComponentProps) => {
   const cellContent = `R${rowIndex}, C${columnIndex}`;
   return (
     <div
@@ -21,7 +21,7 @@ const GridItem: React.FC<GridChildComponentProps> = ({
   );
 };
 
-const ReactWindowVariableSizeGridExample: React.FC = () => {
+const ReactWindowVariableSizeGridExample = () => {
   const columnWidth = (index: number) => Math.min(200, 50 + index * 10);
   const rowHeight = (index: number) => Math.min(100, 20 + index * 20);
 

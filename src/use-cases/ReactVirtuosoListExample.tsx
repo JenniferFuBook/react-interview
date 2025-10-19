@@ -22,7 +22,7 @@ const Footer: Components['Footer'] = () => (
   <div style={{ height: 35, color: 'green' }}>I am footer</div>
 );
 
-const ReactVirtuosoListExample: React.FC = () => {
+const ReactVirtuosoListExample = () => {
   return (
     <Virtuoso
       style={{ height: 350 }} // height of the list

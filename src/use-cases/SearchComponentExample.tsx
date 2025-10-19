@@ -1,7 +1,7 @@
 import SearchComponent from '../components/search-component/SearchComponent';
 import { fruitList } from './data';
 
-const SearchComponentExample: React.FC = () => (
+const SearchComponentExample = () => (
   <SearchComponent items={fruitList} />
 );
 

@@ -12,7 +12,7 @@ interface PostLikesProps {
 
 // Can dynamically retrieves the initial number of likes for a post
 // Additionally, updates to the likes should be stored on the server
-const PostLikes: React.FC<PostLikesProps> = ({ initLikes = 0 }) => {
+const PostLikes = ({ initLikes = 0 }: PostLikesProps) => {
   const [likes, setLikes] = useState<number>(initLikes);
   const handleLike = () => setLikes(likes + 1);
   return (

@@ -11,7 +11,7 @@ type DataProps = {
 const DataContext = createContext<DataProps>({ data: '' });
 
 // Parent component
-const ParentComponent: React.FC = () => {
+const ParentComponent = () => {
   const data = 'Hello from Parent!';
 
   return (
@@ -25,7 +25,7 @@ const ParentComponent: React.FC = () => {
 };
 
 // Child A component
-const ChildA: React.FC = () => {
+const ChildA = () => {
   return (
     <div>
       <h2>Child A Component</h2>
@@ -35,7 +35,7 @@ const ChildA: React.FC = () => {
 };
 
 // Child B component
-const ChildB: React.FC = () => {
+const ChildB = () => {
   return (
     <div>
       <h3>Child B Component</h3>
@@ -45,7 +45,7 @@ const ChildB: React.FC = () => {
 };
 
 // Child C component (deeply nested)
-const ChildC: React.FC = () => {
+const ChildC = () => {
   const data = useContext(DataContext); // Access context directly
   return (
     <div>

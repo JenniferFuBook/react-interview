@@ -13,7 +13,7 @@ type TooltipProps = {
   ref: RefObject<HTMLElement>;
 };
 
-const Tooltip: React.FC<TooltipProps> = ({ text, ref }) => {
+const Tooltip = ({ text, ref }: TooltipProps) => {
   const [position, setPosition] = useState<Position>({ top: 0, left: 0 });
 
   // useLayoutEffect should be used when you need to read from the DOM and 

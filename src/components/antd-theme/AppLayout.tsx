@@ -8,7 +8,7 @@ interface AppLayoutProps {
   onToggleTheme: () => void;
 }
 
-const AppLayout: React.FC<AppLayoutProps> = ({ isDarkMode, onToggleTheme }) => (
+const AppLayout = ({ isDarkMode, onToggleTheme }: AppLayoutProps) => (
   <Layout style={{ minHeight: 'calc(100vh - 40px)' }}>
     <Header
       style={{

@@ -11,7 +11,7 @@ import {
 
 const queryClient = new QueryClient(); // Create a client
 
-const UseQueryExample: React.FC = () => {
+const UseQueryExample = () => {
   const { isPending, isFetching, data, error } = useQuery({
     // Fetch data
     queryKey: ['catFact'],
@@ -33,7 +33,7 @@ const UseQueryExample: React.FC = () => {
   return <div>{isFetching ? 'Updating...' : data.fact}</div>;
 };
 
-const UpdateButton: React.FC = () => {
+const UpdateButton = () => {
   const queryClient = useQueryClient();
   const isFetching = useIsFetching();
 
@@ -51,7 +51,7 @@ const UpdateButton: React.FC = () => {
   );
 };
 
-const TanStackUseQueryExample: React.FC = () => {
+const TanStackUseQueryExample = () => {
   return (
     // Must wrap the app with QueryClientProvider to provide the client to the app
     <QueryClientProvider client={queryClient}>

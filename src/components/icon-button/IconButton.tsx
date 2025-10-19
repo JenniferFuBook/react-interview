@@ -6,12 +6,12 @@ type IconButtonProps = {
   handleClick: MouseEventHandler<HTMLButtonElement>;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const IconButton: React.FC<IconButtonProps> = ({
+const IconButton = ({
   icon,
   altText,
   handleClick,
   ...props
-}) => {
+}: IconButtonProps) => {
   useEffect(() => {
     import('./index.css'); // Dynamically import the CSS file to prevent interference with global styles
   }, []);

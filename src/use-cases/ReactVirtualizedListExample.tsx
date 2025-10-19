@@ -18,7 +18,7 @@ const Row: ListRowRenderer = ({ index, style }) => {
   );
 };
 
-const ReactVirtualizedListExample: React.FC = () => {
+const ReactVirtualizedListExample = () => {
   return (
     // AutoSizer automatically sets the width of the list
     // based on the width of the parent container.

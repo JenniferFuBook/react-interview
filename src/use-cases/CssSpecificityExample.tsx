@@ -33,7 +33,7 @@ interface ButtonProps {
   id: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, id }) => (
+const Button = ({ children, id }: ButtonProps) => (
   <button className="button primary-button" id={id}>
     {children}
   </button>

@@ -7,13 +7,13 @@ type IconButtonProps = {
   handleClick: MouseEventHandler<HTMLButtonElement>;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const IconButton: React.FC<IconButtonProps> = ({
+const IconButton = ({
   icon,
   altText,
   handleClick,
   className,
   ...props
-}) => {
+}: IconButtonProps) => {
   return (
     // The button's className combines Tailwind CSS classes with 
     // any additional class names passed through props, allowing 

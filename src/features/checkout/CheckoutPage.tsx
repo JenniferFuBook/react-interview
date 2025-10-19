@@ -5,4 +5,4 @@
  * and separation of concerns in a larger application. It can be used in conjunction with
  * other feature modules like user profile and product inventory, as shown in the ModularRouteApp example.
  */
-export const CheckoutPage: React.FC = () => <h1>Checkout Page</h1>;
+export const CheckoutPage = () => <h1>Checkout Page</h1>;
