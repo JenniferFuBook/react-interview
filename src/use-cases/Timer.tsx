@@ -8,7 +8,8 @@ const Timer = () => {
   // Increment the timer every second when running
   useInterval(
     () => {
-      setSeconds((prev: number) => prev + 1);
+      //  Ensure the update is based on the most recent state value, avoiding stale closures
+      setSeconds((prevSeconds: number) => prevSeconds + 1);
     },
     isRunning ? 1000 : null // Only run if isRunning is true
   );
