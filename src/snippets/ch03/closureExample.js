@@ -5,6 +5,7 @@ function outer() {
     return count;
   };
 }
+
 const counter = outer();
 console.log(counter()); // 1
 console.log(counter()); // 2
