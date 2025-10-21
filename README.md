@@ -62,6 +62,7 @@ react-interview/                   # Root of the project
   │     ├── assets/                # Shared images and assets
   │     ├── components/            # Reusable React components
   │     ├── hooks/                 # Custom React hooks
+  │     ├── snippets/              # Code snippets
   │     ├── use-cases/             # Individual use case demos
   │     ├── App.tsx                # Main app component
   │     ├── index.css              # Global styles
