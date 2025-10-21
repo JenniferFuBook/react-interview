@@ -1,0 +1,14 @@
+{
+  "message": "Hello, world!",
+  "status": "success",
+  "version": "1.0.0",
+  "info": {
+    "author": "Jennifer Fu",
+    "license": "MIT"
+  },
+  "features": [
+    "fast",
+    "scalable",
+    "reliable"
+  ]
+}
