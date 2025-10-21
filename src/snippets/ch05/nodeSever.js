@@ -34,9 +34,8 @@ app.get('/api/data', async (req, res) => {
     // res.header('Access-Control-Allow-Headers', 'Authorization, Content-Type'); 
     // res.header('Access-Control-Allow-Credentials', 'true');
   
-    // Parse the file content and return it as a JSON response.
+    // Parse the file content and return it as a JSON response
     res.json(jsonData);
-
 
   } catch (err) { // Catch and log file read errors, then return a 500 response
     console.error('File read error:', err);
