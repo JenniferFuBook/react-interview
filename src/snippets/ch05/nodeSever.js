@@ -1,3 +1,8 @@
+/** 
+ * A simple Node.js server using Express to serve data from a local JSON file.
+ * Run command: node –watch src/snippets/ch05/nodeSever.js
+ * Uncomment the CORS section to try listing 6.1
+ */
 import express from 'express';
 import { readFile } from 'fs/promises';
 import path from 'path';
@@ -12,6 +17,29 @@ const __dirname = path.dirname(__filename);
 // Initialize an Express app
 const app = express();
 const PORT = 3000;
+
+// Uncomment it to try listing 6.1
+// // Add CORS headers and handle OPTIONS requests globally, before route definitions
+// app.use((req, res, next) => {
+//   // Specify the allowed origin
+//   res.header('Access-Control-Allow-Origin', 'https://ui.myapp.com'); 
+
+//   // Specify allowed HTTP methods
+//   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  
+//   // Specify allowed request headers
+//   res.header('Access-Control-Allow-Headers', 'Authorization, Content-Type');
+
+//   // Enable credentialed requests (e.g., cookies, Authorization)
+//   res.header('Access-Control-Allow-Credentials', 'true');
+
+//   // Handle preflight OPTIONS requests
+//   if (req.method === 'OPTIONS') { 
+//     return res.sendStatus(204);
+//   }
+
+//   next(); // Pass control to other middleware or routes
+// });
 
 // Define an API route to serve data from a local JSON file
 app.get('/api/data', async (req, res) => {
@@ -28,15 +56,8 @@ app.get('/api/data', async (req, res) => {
     // Log the data content on the server console
     console.log('Read data from data.json:', jsonData);
 
-    // Set CORS headers to allow requests from the specified origin
-    // res.header('Access-Control-Allow-Origin', 'https://ui.myapp.com');
-    // res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); 
-    // res.header('Access-Control-Allow-Headers', 'Authorization, Content-Type'); 
-    // res.header('Access-Control-Allow-Credentials', 'true');
-  
     // Parse the file content and return it as a JSON response
     res.json(jsonData);
-
   } catch (err) { // Catch and log file read errors, then return a 500 response
     console.error('File read error:', err);
     res.status(500).json({ error: 'Internal Server Error' });
