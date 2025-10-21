@@ -16,7 +16,8 @@ const PORT = 3000;
 // Define an API route to serve data from a local JSON file
 app.get('/api/data', async (req, res) => {
   try {
-    
+    // Construct absolute path to data.json
+    const dataPath = path.resolve(__dirname, 'data.json');
 
     // Asynchronously read the content of data.json
     const data = await readFile(dataPath, 'utf-8');
@@ -27,8 +28,15 @@ app.get('/api/data', async (req, res) => {
     // Log the data content on the server console
     console.log('Read data from data.json:', jsonData);
 
-    // Parse the file content and return it as a JSON response
+    // Set CORS headers to allow requests from the specified origin
+    // res.header('Access-Control-Allow-Origin', 'https://ui.myapp.com');
+    // res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); 
+    // res.header('Access-Control-Allow-Headers', 'Authorization, Content-Type'); 
+    // res.header('Access-Control-Allow-Credentials', 'true');
+  
+    // Parse the file content and return it as a JSON response.
     res.json(jsonData);
+
 
   } catch (err) { // Catch and log file read errors, then return a 500 response
     console.error('File read error:', err);
