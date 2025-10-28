@@ -7,7 +7,7 @@ const BlogPostExample2 = () => (
   <>
     <BlogPost post={samplePost} />
     <PostLikes initLikes={0} />
-    <PostComments comments={sampleComments} />
+    <PostComments initComments={sampleComments} />
   </>
 );
 

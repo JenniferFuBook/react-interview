@@ -1,13 +1,8 @@
 // This example is contained in a single file for simplicity.
 // In a real-world application, you would split the components into separate files.
 
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  gql,
-  useQuery,
-} from '@apollo/client';
+import { ApolloClient, InMemoryCache, gql, HttpLink } from '@apollo/client';
+import { ApolloProvider, useQuery } from '@apollo/client/react';
 
 // Define the GraphQL query to fetch location data
 const GET_LOCATIONS = gql`
@@ -23,11 +18,13 @@ const GET_LOCATIONS = gql`
 
 // Initialize Apollo Client with the GraphQL API endpoint
 const client = new ApolloClient({
-  uri: 'https://flyby-router-demo.herokuapp.com/', // Use an example GraphQL API endpoint
+  link: new HttpLink({
+    uri: 'https://flyby-router-demo.herokuapp.com/', // Use an example GraphQL API endpoint
+  }),
   cache: new InMemoryCache(),
 });
 
-// Define the type for the location data
+// Define the types for the GraphQL response
 type Location = {
   id: string;
   name: string;
@@ -35,9 +32,12 @@ type Location = {
   photo: string;
 };
 
-// Define the component to display locations that uses the GraphQL query
+type LocationsData = {
+  locations: Location[];
+};
+
 const DisplayLocations = () => {
-  const { loading, error, data } = useQuery(GET_LOCATIONS); // Use the useQuery hook to fetch data
+  const { loading, error, data } = useQuery<LocationsData>(GET_LOCATIONS); // Use the useQuery hook to fetch data
 
   if (loading) {
     return <p>Loading...</p>;
@@ -47,7 +47,7 @@ const DisplayLocations = () => {
     return <p>Error : {error.message}</p>;
   }
 
-  return data.locations.map(({ id, name, description, photo }: Location) => (
+  return data?.locations.map(({ id, name, description, photo }: Location) => (
     <div key={id}>
       <h3>{name}</h3>
       <img width="400" height="250" alt="location-reference" src={photo} />

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 interface DogImage {
   message: string; // The image URL
@@ -9,7 +9,7 @@ const ViteApiProxyExample = () => {
   const [loading, setLoading] = useState(true);
   const [dog, setDog] = useState<DogImage | null>(null);
 
-  const fetchDogImage = useCallback(async () => {
+  const fetchDogImage = async () => {
     setLoading(true);
     setDog(null);
 
@@ -26,7 +26,7 @@ const ViteApiProxyExample = () => {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }
 
   useEffect(() => {
     fetchDogImage();

@@ -1,6 +1,8 @@
 // This example is contained in a single file for simplicity.
 // In a real-world application, you would split the components into separate files.
 
+'use no memo'; // Disable React Compiler memoization for this module
+
 import { AutoSizer, List, ListRowRenderer } from 'react-virtualized';
 
 const Row: ListRowRenderer = ({ index, style }) => {

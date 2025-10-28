@@ -28,8 +28,8 @@ import NestedRoutesExample from './use-cases/NestedRoutesExample';
 import ProtectedRouteExample from './use-cases/ProtectedRouteExample';
 import AntDThemeExample from './use-cases/AntDThemeExample';
 import AutoAntDThemeExample from './use-cases/AutoAntDThemeExample';
-import ReactWindowFixedSizeListExample from './use-cases/ReactWindowFixedSizeListExample';
-import ReactWindowVariableSizeGridExample from './use-cases/ReactWindowVariableSizeGridExample';
+import ReactWindowListExample from './use-cases/ReactWindowListExample';
+import ReactWindowGridExample from './use-cases/ReactWindowGridExample';
 import ReactVirtualizedListExample from './use-cases/ReactVirtualizedListExample';
 import ReactVirtuosoListExample from './use-cases/ReactVirtuosoListExample';
 import FormSimpleWithAxios from './components/form/FormSimpleWithAxios';
@@ -82,14 +82,6 @@ function App() {
       {exampleName === 'ProtectedRouteExample' && <ProtectedRouteExample />}
       {exampleName === 'AntDThemeExample' && <AntDThemeExample />}
       {exampleName === 'AutoAntDThemeExample' && <AutoAntDThemeExample />}
-      {exampleName === 'ReactWindowFixedSizeListExample' && <ReactWindowFixedSizeListExample />}
-      {exampleName === 'ReactWindowVariableSizeGridExample' && <ReactWindowVariableSizeGridExample />}
-      {exampleName === 'ReactVirtualizedListExample' && <ReactVirtualizedListExample />}
-      {exampleName === 'ReactVirtuosoListExample' && <ReactVirtuosoListExample />}
-      {exampleName === 'FormSimpleWithAxios' && <FormSimpleWithAxios />}
-      {exampleName === 'TanStackUseQueryExample' && <TanStackUseQueryExample />}
-      {exampleName === 'TanStackUseMutationExample' && <TanStackUseMutationExample />}
-      {exampleName === 'GraphQLExample' && <GraphQLExample />}
       {exampleName === 'FaviconExample' && <FaviconExample />}
 
       {/* Chapter 6 examples */}
@@ -107,6 +99,14 @@ function App() {
       {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
       {exampleName === 'UsePromiseExample' && <UsePromiseExample />}
       {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
+      {exampleName === 'ReactWindowListExample' && <ReactWindowListExample />}
+      {exampleName === 'ReactWindowGridExample' && <ReactWindowGridExample />}
+      {exampleName === 'ReactVirtualizedListExample' && <ReactVirtualizedListExample />}
+      {exampleName === 'ReactVirtuosoListExample' && <ReactVirtuosoListExample />}
+      {exampleName === 'FormSimpleWithAxios' && <FormSimpleWithAxios />}
+      {exampleName === 'TanStackUseQueryExample' && <TanStackUseQueryExample />}
+      {exampleName === 'TanStackUseMutationExample' && <TanStackUseMutationExample />}
+      {exampleName === 'GraphQLExample' && <GraphQLExample />}
     </>
   );
 }

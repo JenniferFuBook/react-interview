@@ -1,6 +1,6 @@
 import type { LatLngExpression } from 'leaflet';
-import { useEffect, useState } from 'react';
 import type { ForecastData } from './WeatherForecastTypes';
+import { useEffect, useState } from 'react';
 
 /**
  * useWeatherForecast is a custom React hook that fetches hourly weather 

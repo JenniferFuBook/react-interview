@@ -9,16 +9,22 @@ import submitIcon from './submit.svg';
 import './index.css';
 
 type PostCommentsProps = {
-  comments: CommentProps[];
+  initComments: CommentProps[];
 };
 
 // Can dynamically retrieves the comments for a post
 // Additionally, updates to the comments should be stored on the server
-const PostComments = ({ comments }: PostCommentsProps) => {
+const PostComments = ({ initComments }: PostCommentsProps) => {
   const [text, setText] = useState<string>('');
-  const handleClick = (e: React.FormEvent<HTMLInputElement>) =>
+  const [comments, setComments] = useState<CommentProps[]>(initComments ?? []);
+  const handleChange= (e: React.FormEvent<HTMLInputElement>) => {
     setText((e.target as HTMLInputElement).value);
-  const handleSubmit = () => setText('');
+  }
+  const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setText('');
+    setComments([...comments, { username: 'currentUser', comment: text }]);
+  }
   return (
     <div className="post-comments">
       <h2>{comments.length} comments:</h2>
@@ -34,7 +40,7 @@ const PostComments = ({ comments }: PostCommentsProps) => {
           type="text"
           value={text}
           placeholder="Write a comment..."
-          onChange={handleClick}
+          onChange={handleChange}
         />
         <IconButton
           className="submit-button"

@@ -4,7 +4,15 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react({
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }),
+    ,
+    tailwindcss(),
+  ],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
@@ -15,11 +23,11 @@ export default defineConfig({
     proxy: {
       '/apiproxy': {
         // Actual external API target
-        target: 'https://dog.ceo', 
+        target: 'https://dog.ceo',
         // Ensure the host header is updated to match the target
-        changeOrigin: true, 
+        changeOrigin: true,
         // Allow HTTPS (even with self-signed certs)
-        secure: true, 
+        secure: true,
         // Rewrites /apiproxy/api/... to /api/... for the actual backend
         rewrite: (path) => path.replace(/^\/apiproxy/, ''),
       },
