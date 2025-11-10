@@ -20,16 +20,16 @@ const ModularRouteApp = () => {
         {/* The root path redirects to the products page */}
         {/* Each feature module can have its own nested routes */}
         <nav
-        style={{
-          display: 'flex',
-          gap: '10px',
-          marginBottom: '20px',
-        }}
-      >
-        <Link to="/checkout">Checkout</Link>
-        <Link to="/profile">Profile</Link>
-        <Link to="/products">Products</Link>
-      </nav>
+          style={{
+            display: 'flex',
+            gap: '10px',
+            marginBottom: '20px',
+          }}
+        >
+          <Link to="/checkout">Checkout</Link>
+          <Link to="/profile">Profile</Link>
+          <Link to="/products">Products</Link>
+        </nav>
         <Routes>
           <Route path="/" element={<Navigate to="/products" replace />} />
           <Route path="/checkout/*" element={<CheckoutApp />} />
