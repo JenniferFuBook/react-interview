@@ -8,18 +8,15 @@ const ReactRouterExample = () => {
     // BrowserRouter wraps the entire app to enable routing functionality
     <BrowserRouter>
       {/* Navigation menu uses Link components for client-side navigation */}
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+      <nav
+        style={{
+          display: 'flex',
+          gap: '10px',
+        }}
+      >
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
 
       {/* The Routes component defines the routing structure */}
@@ -28,15 +25,17 @@ const ReactRouterExample = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 errors */}
+        {/* Catch-all route for 404 errors */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
-const Home = () =><h1>Home Page</h1>;
-const About = () =><h1>About Page</h1>;
-const Contact = () =><h1>Contact Page</h1>;
-const NotFound = () =><h1>404: Page Not Found</h1>;
+// Page components for each route
+const Home = () => <h1>Home Page</h1>;
+const About = () => <h1>About Page</h1>;
+const Contact = () => <h1>Contact Page</h1>;
+const NotFound = () => <h1>404: Page Not Found</h1>;
 
 export default ReactRouterExample;

@@ -9,18 +9,15 @@ const ProtectedRouteExample = () => {
     // BrowserRouter wraps the entire app to enable routing functionality
     <BrowserRouter>
       {/* Navigation menu uses Link components for client-side navigation */}
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+      <nav
+        style={{
+          display: 'flex',
+          gap: '10px',
+        }}
+      >
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
 
       {/* The Routes component defines the routing structure */}
@@ -41,6 +38,7 @@ const ProtectedRouteExample = () => {
   );
 };
 
+// Page components for each route
 const Home = () => <h1>Home Page</h1>;
 const Login = () => <h1>Login Page</h1>;
 const About = () => <h1>About Page</h1>;
