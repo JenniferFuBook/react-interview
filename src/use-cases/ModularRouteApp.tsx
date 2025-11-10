@@ -16,9 +16,6 @@ const ModularRouteApp = () => {
       {/* Here, we use a simple div with "Loading..." text as a placeholder */}
       {/* It can be replaced with a more sophisticated loading component if needed */}
       <Suspense fallback={<div>Loading...</div>}>
-        {/* Define routes for each feature module */}
-        {/* The root path redirects to the products page */}
-        {/* Each feature module can have its own nested routes */}
         <nav
           style={{
             display: 'flex',
@@ -30,6 +27,9 @@ const ModularRouteApp = () => {
           <Link to="/profile">Profile</Link>
           <Link to="/products">Products</Link>
         </nav>
+        {/* Define routes for each feature module */}
+        {/* The root path redirects to the products page */}
+        {/* Each feature module can have its own nested routes */}
         <Routes>
           <Route path="/" element={<Navigate to="/products" replace />} />
           <Route path="/checkout/*" element={<CheckoutApp />} />
