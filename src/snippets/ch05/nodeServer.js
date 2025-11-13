@@ -1,6 +1,6 @@
 /** 
  * A simple Node.js server using Express to serve data from a local JSON file.
- * Run command: node –watch src/snippets/ch05/nodeServer.js
+ * Run command: node –-watch src/snippets/ch05/nodeServer.js
  * Uncomment the CORS section to try listing 6.1
  */
 import express from 'express';
