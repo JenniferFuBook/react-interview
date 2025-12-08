@@ -22,7 +22,7 @@ const ViteApiProxyExample = () => {
       const data: DogImage = await response.json();
       setDog(data);
     } catch (err) {
-      console.error(`Failed to fetch dog image: %{err}`);
+      console.error(`Failed to fetch dog image: ${err}`);
     } finally {
       setLoading(false);
     }
