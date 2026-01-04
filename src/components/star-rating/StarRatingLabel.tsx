@@ -2,6 +2,6 @@ type StarRatingLabelProps = {
   text: string;
 };
 
-export const StarRatingLabel: React.FC<StarRatingLabelProps> = ({ text }) => {
+export const StarRatingLabel = ({ text }: StarRatingLabelProps) => {
   return <div>{text}</div>;
 };
