@@ -7,21 +7,23 @@ type StarRatingListProps = {
   activeColor: string;
   inactiveColor: string;
   starSize: string;
+  hoverIndex: number
   onHover: (e: React.MouseEvent<HTMLDivElement>) => void;
   onLeave: () => void;
   onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
 
-export const StarRatingList = ({
+export const StarRatingList: React.FC<StarRatingListProps> = ({
   numOfStars,
   activeUntil,
   activeColor,
   inactiveColor,
   starSize,
+  hoverIndex,
   onHover,
   onLeave,
   onClick,
-}: StarRatingListProps) => {
+}) => {
   return (
     <div
       className="star-list-container"
@@ -46,6 +48,7 @@ export const StarRatingList = ({
             activeColor={activeColor}
             inactiveColor={inactiveColor}
             starSize={starSize}
+            hoverIndex={hoverIndex}
           />
         );
       })}
