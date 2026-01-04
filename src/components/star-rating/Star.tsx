@@ -7,14 +7,14 @@ type StarProps = {
   hoverIndex: number;
 };
 
-export const Star: React.FC<StarProps> = ({
+export const Star = ({
   index,
   fill,
   activeColor,
   inactiveColor,
   starSize,
   hoverIndex,
-}) => {
+}: StarProps) => {
   return (
     <span // Container for stars
       // Dynamically apply the bounce animation to whichever star is hovered

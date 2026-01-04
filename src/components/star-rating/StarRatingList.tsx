@@ -13,7 +13,7 @@ type StarRatingListProps = {
   onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
 
-export const StarRatingList: React.FC<StarRatingListProps> = ({
+export const StarRatingList = ({
   numOfStars,
   activeUntil,
   activeColor,
@@ -23,7 +23,7 @@ export const StarRatingList: React.FC<StarRatingListProps> = ({
   onHover,
   onLeave,
   onClick,
-}) => {
+}: StarRatingListProps) => {
   return (
     <div
       className="star-list-container"
