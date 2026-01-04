@@ -22,7 +22,7 @@ type StarRatingProps = {
 };
 
 // Main container component (logic layer)
-const StarRating: React.FC<StarRatingProps> = ({
+const StarRating = ({
   defaultRating = -1,
   numOfStars = 5,
   activeColor = 'orange',
@@ -30,7 +30,7 @@ const StarRating: React.FC<StarRatingProps> = ({
   starSize = '40px',
   text = 'Not rated',
   showLabel = true,
-}) => {
+}: StarRatingProps) => {
   // Track the current rating (persistent after click)
   const [rating, setRating] = useState<number>(defaultRating);
 

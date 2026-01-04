@@ -3,9 +3,5 @@ type StarRatingLabelProps = {
 };
 
 export const StarRatingLabel = ({ text }: StarRatingLabelProps) => {
-  return (
-    <div role="status" tabIndex={0}>
-      {text}
-    </div>
-  );
+  return <div>{text}</div>;
 };
