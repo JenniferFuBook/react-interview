@@ -49,12 +49,12 @@ export const LocationMarker = () => {
         autoPanPadding={[50, 50]} // Apply padding to prevent the popup from hitting map edges
       >
         {/* Handle loading, error, and success states for the forecast */}
-        {!position || loading || !forecast ? (
+        {loading ? (
           <div>Loading...</div>
         ) : error ? (
-          <div>Failed to get a weather forecast.</div>
+          <div>Unable to retrieve weather forecasts outside the United States.</div>
         ) : (
-          <WeatherForecastDisplay forecast={forecast} />
+          forecast && <WeatherForecastDisplay forecast={forecast} />
         )}
       </Popup>
     </Marker>
