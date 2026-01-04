@@ -3,7 +3,6 @@ import {
   createContext,
   useState,
   ReactNode,
-  useContext,
   useEffect,
 } from 'react';
 import { useCurrentPosition } from './useCurrentPosition';
@@ -17,15 +16,14 @@ import { useCurrentPosition } from './useCurrentPosition';
  * - Stores the position in state and updates it dynamically.
  * - Provides `position` and `setPosition` via React Context.
  * - Ensures child components only render once a valid position exists.
- * - Includes a custom hook `usePosition` for easy access, throwing an error if used outside the provider.
  */
-type PositionContextType = {
+export type PositionContextType = {
   position: LatLngExpression;
   setPosition: React.Dispatch<React.SetStateAction<LatLngExpression>>;
 };
 
 // Create a context for storing the user's current map position
-const PositionContext = createContext<PositionContextType | undefined>(
+export const PositionContext = createContext<PositionContextType | undefined>(
   undefined
 );
 
@@ -64,14 +62,4 @@ export const PositionProvider = ({ children }: PositionProviderProps) => {
       {children}
     </PositionContext.Provider>
   );
-};
-
-// Define a custom hook to access the position context
-// Throw an error if used outside of PositionProvider.
-export const usePosition = () => {
-  const context = useContext(PositionContext);
-  if (!context) {
-    throw new Error('usePosition must be used within a PositionProvider');
-  }
-  return context;
 };

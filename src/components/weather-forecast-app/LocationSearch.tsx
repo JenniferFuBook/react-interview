@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
-import { usePosition } from './PositionContext';
+import { usePosition } from './usePosition';
 import { locationService } from './locationService';
 
 /**

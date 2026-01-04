@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
-import { usePosition } from './PositionContext';
+import { usePosition } from './usePosition';
 import { LocationSearch } from './LocationSearch';
 import { LocationMarker } from './LocationMarker';
 

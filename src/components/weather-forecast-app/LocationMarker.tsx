@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useMapEvents, Marker, Popup } from 'react-leaflet';
-import { usePosition } from './PositionContext';
+import { usePosition } from './usePosition';
 import { useWeatherForecast } from './useWeatherForecast';
 import { WeatherForecastDisplay } from './WeatherForecastDisplay';
 
