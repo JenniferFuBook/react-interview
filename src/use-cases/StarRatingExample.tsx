@@ -1,6 +1,6 @@
 import StarRating from '../components/star-rating/StarRating';
 
-const StarRatingExample= () => {
+const StarRatingExample = () => {
   return (
     <div style={{ padding: 20 }}>
       <StarRating defaultRating={1} activeColor="black" />
