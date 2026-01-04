@@ -12,7 +12,7 @@ type StarRatingListProps = {
   onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
 
-export const StarRatingList = ({
+export const StarRatingList: React.FC<StarRatingListProps> = ({
   numOfStars,
   activeUntil,
   activeColor,
@@ -21,7 +21,7 @@ export const StarRatingList = ({
   onHover,
   onLeave,
   onClick,
-}: StarRatingListProps) => {
+}) => {
   return (
     <div
       className="star-list-container"
@@ -31,12 +31,18 @@ export const StarRatingList = ({
     >
       {/* Generate an array of stars based on numOfStars */}
       {Array.from({ length: numOfStars }).map((_, i) => {
-        const startIndex = i + 1; // Create 1-based index for stars
+        const startIndex = i + 1; // 1-based index for stars
         return (
           <Star
             key={i}
             index={startIndex} // Star position in the list
-            fill={startIndex <= activeUntil ? 1 : 0} // 1 = full, 0 = empty
+            fill={
+              startIndex <= Math.floor(activeUntil)
+                ? 1
+                : startIndex - 0.5 === activeUntil
+                ? 0.5
+                : 0
+            }
             activeColor={activeColor}
             inactiveColor={inactiveColor}
             starSize={starSize}

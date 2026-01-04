@@ -12,5 +12,9 @@ export const calculateNewRating = (e: React.MouseEvent) => {
   if (!el) {
     return;
   }
-  return Number(el.dataset.starIndex);
+  const { left, width } = el.getBoundingClientRect();
+  const offsetX = e.clientX - left;
+  const isHalf = offsetX < width / 2;
+  const idx = Number(el.dataset.starIndex);
+  return isHalf ? idx - 0.5 : idx;
 };

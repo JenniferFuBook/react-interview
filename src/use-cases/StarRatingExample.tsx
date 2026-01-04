@@ -1,11 +1,11 @@
 import StarRating from '../components/star-rating/StarRating';
 
-const StarRatingExample = () => {
+const StarRatingExample: React.FC = () => {
   return (
     <div style={{ padding: 20 }}>
-      <StarRating defaultRating={2} activeColor="black" />
+      <StarRating defaultRating={1} activeColor="black" />
       <StarRating
-        defaultRating={4}
+        defaultRating={0.5}
         numOfStars={5}
         activeColor="blue"
         inactiveColor="darkgray"
