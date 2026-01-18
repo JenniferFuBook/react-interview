@@ -39,6 +39,8 @@ import GraphQLExample from './use-cases/GraphQLExample';
 import FaviconExample from './use-cases/FaviconExample';
 import RenderComponentExample from './use-cases/RenderComponentExample';
 import UsePromiseExample from './use-cases/UsePromiseExample';
+import FlagIsMountedExample from './use-cases/FlagIsMountedExample';
+import AbortControllerExample from './use-cases/AbortControllerExample';
 import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
 import ViteApiProxyExample from './use-cases/ViteApiProxyExample';
 import LRUDemo from './use-cases/LRUDemo';
@@ -98,6 +100,8 @@ function App() {
       {/* Appendix A examples */}
       {exampleName === 'RenderComponentExample' && <RenderComponentExample />}
       {exampleName === 'UsePromiseExample' && <UsePromiseExample />}
+      {exampleName === 'FlagIsMountedExample' && <FlagIsMountedExample />}
+      {exampleName === 'AbortControllerExample' && <AbortControllerExample />}
       {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
       {exampleName === 'ReactWindowListExample' && <ReactWindowListExample />}
       {exampleName === 'ReactWindowGridExample' && <ReactWindowGridExample />}
