@@ -42,6 +42,7 @@ import UsePromiseExample from './use-cases/UsePromiseExample';
 import FlagIsMountedExample from './use-cases/FlagIsMountedExample';
 import AbortControllerExample from './use-cases/AbortControllerExample';
 import ErrorBoundaryExample from './use-cases/ErrorBoundaryExample';
+import FCErrorBoundaryExample from './use-cases/FCErrorBoundaryExample';
 import ViteApiProxyExample from './use-cases/ViteApiProxyExample';
 import LRUDemo from './use-cases/LRUDemo';
 import StarRatingExample from './use-cases/StarRatingExample';
@@ -103,6 +104,7 @@ function App() {
       {exampleName === 'FlagIsMountedExample' && <FlagIsMountedExample />}
       {exampleName === 'AbortControllerExample' && <AbortControllerExample />}
       {exampleName === 'ErrorBoundaryExample' && <ErrorBoundaryExample />}
+      {exampleName === 'FCErrorBoundaryExample' && <FCErrorBoundaryExample />}
       {exampleName === 'ReactWindowListExample' && <ReactWindowListExample />}
       {exampleName === 'ReactWindowGridExample' && <ReactWindowGridExample />}
       {exampleName === 'ReactVirtualizedListExample' && <ReactVirtualizedListExample />}
